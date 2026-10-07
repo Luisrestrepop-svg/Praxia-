@@ -134,6 +134,9 @@ export const navLinks = [
   { href: '#nosotros', label: 'Nosotros' },
 ]
 
-export const WHATSAPP_DISPLAY = '+57 321 790 8586'
+export const WHATSAPP_DISPLAY = '+57 321 790 8685'
+export const EMAIL = 'praxialabsm@gmail.com'
+export const INSTAGRAM_URL = 'https://www.instagram.com/praxialabs'
+export const TIKTOK_URL = 'https://www.tiktok.com/@praxialabs'
 export const waLink = (msg = 'Hola, quiero más información sobre los servicios de Praxia Labs.') =>
-  `https://wa.me/573217908586?text=${encodeURIComponent(msg)}`
+  `https://wa.me/573217908685?text=${encodeURIComponent(msg)}`

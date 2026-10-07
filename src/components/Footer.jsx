@@ -1,4 +1,4 @@
-import { navLinks, waLink, WHATSAPP_DISPLAY } from '../data'
+import { navLinks, waLink, WHATSAPP_DISPLAY, EMAIL, INSTAGRAM_URL, TIKTOK_URL } from '../data'
 
 const linkCls = 'text-[14.5px] text-[#9AA6B8] transition-colors hover:text-white'
 
@@ -17,8 +17,10 @@ export default function Footer() {
             <h4 className="mb-4 text-sm !text-white">Contacto</h4>
             <ul className="flex flex-col gap-2.5">
               <li><a className={linkCls} href={waLink()} target="_blank" rel="noopener noreferrer">WhatsApp: {WHATSAPP_DISPLAY}</a></li>
-              <li><a className={linkCls} href="mailto:hola@praxialabs.co">hola@praxialabs.co</a></li>
-              <li><a className={linkCls} href="#">Medellín, Antioquia</a></li>
+              <li><a className={linkCls} href={`mailto:${EMAIL}`}>{EMAIL}</a></li>
+              <li><a className={linkCls} href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">Instagram: @praxialabs</a></li>
+              <li><a className={linkCls} href={TIKTOK_URL} target="_blank" rel="noopener noreferrer">TikTok: @praxialabs</a></li>
+              <li><span className="text-[14.5px] text-[#9AA6B8]">Medellín, Antioquia</span></li>
             </ul>
           </div>
           <div>
