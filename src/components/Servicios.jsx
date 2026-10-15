@@ -36,11 +36,11 @@ export default function Servicios() {
           <div key={cat.letter} className="mb-8">
             <div className="mb-3.5 flex items-baseline gap-3 border-b border-white/10 pb-2.5">
               <span className="font-display text-xl font-bold text-blue">{cat.letter}</span>
-              <span className="text-base font-semibold text-navy">{cat.title}</span>
+              <h3 className="text-base font-semibold text-navy">{cat.title}</h3>
             </div>
-            <div className="grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-2.5">
+            <ul className="grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-2.5">
               {cat.items.map((s) => (
-                <div
+                <li
                   key={s.name}
                   className="card-grad hover-lift flex items-center gap-3 rounded-xl px-3.5 py-2.5 shadow-[var(--shadow-soft),inset_0_1px_0_rgba(255,255,255,0.04)] hover:-translate-y-0.5"
                 >
@@ -49,9 +49,9 @@ export default function Servicios() {
                   </div>
                   <div className="flex-1 text-sm font-semibold text-navy">{s.name}</div>
                   <Dots level={s.level} />
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         ))}
       </div>

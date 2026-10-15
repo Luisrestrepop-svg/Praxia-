@@ -140,3 +140,42 @@ export const INSTAGRAM_URL = 'https://www.instagram.com/praxialabs'
 export const TIKTOK_URL = 'https://www.tiktok.com/@praxialabs'
 export const waLink = (msg = 'Hola, quiero más información sobre los servicios de Praxia Labs.') =>
   `https://wa.me/573217908685?text=${encodeURIComponent(msg)}`
+
+export const faqs = [
+  {
+    q: '¿Qué hace Praxia Labs?',
+    a: 'Praxia Labs es un equipo de Medellín que ayuda a tiendas, restaurantes y negocios de barrio a digitalizarse: automatizamos tu WhatsApp con chatbots e inteligencia artificial, te posicionamos en Google (Google Business Profile y SEO local), creamos tu página web o catálogo en línea y gestionamos tus redes sociales.',
+  },
+  {
+    q: '¿Cuánto cuesta un chatbot de WhatsApp para mi negocio?',
+    a: 'Tenemos tres niveles. El chatbot con respuestas fijas cuesta $500.000 COP (pago único), el chatbot con IA conversacional cuesta $1.500.000 COP y el agente autónomo con integraciones parte desde $2.000.000 COP según la complejidad de tu proyecto. Los servicios de terceros, como WhatsApp o la IA que elijas, se pagan aparte directamente al proveedor.',
+  },
+  {
+    q: '¿Cuánto tarda en estar listo mi chatbot?',
+    a: 'El chatbot con respuestas fijas queda listo en 1 a 2 semanas, el chatbot con IA conversacional en 3 a 6 semanas y el agente autónomo en 6 a 12 semanas. Si hay que crear la cuenta de WhatsApp Business API desde cero, suma entre 1 y 2 semanas.',
+  },
+  {
+    q: '¿Necesito saber de tecnología para trabajar con ustedes?',
+    a: 'No. Nosotros configuramos todo y te explicamos cada paso con calma y sin tecnicismos. Trabajamos con dueños de todas las edades, incluyendo quienes nunca han usado estas herramientas, y nos quedamos contigo mientras aprendes.',
+  },
+  {
+    q: '¿Qué incluyen los paquetes y cuánto cuestan?',
+    a: '“Da el salto digital” cuesta $1.500.000 COP e incluye WhatsApp automatizado y posicionamiento en Google (ficha + SEO local). “Presencia completa” cuesta $3.200.000 COP y suma una página web o catálogo en línea. “Impulso visual” cuesta $220.000 COP e incluye 4 piezas publicitarias por el precio de 3, con fotos de producto mejoradas con IA. Son pagos únicos.',
+  },
+  {
+    q: '¿Los precios incluyen dominio, hosting o WhatsApp?',
+    a: 'No. Los precios no incluyen servicios de terceros como dominio, hosting, WhatsApp, la inteligencia artificial que elijas ni el almacenamiento de datos. Estos se pagan aparte, directamente al proveedor. El mantenimiento mensual de la web y el SEO local continuo son opcionales y se cotizan aparte.',
+  },
+  {
+    q: '¿Hacen SEO local y optimizan Google Business Profile en Medellín?',
+    a: 'Sí. Optimizamos tu ficha de Google Business Profile y hacemos SEO local básico para que tus clientes de tu comuna y tu barrio te encuentren cuando busquen en Google y Google Maps. También ayudamos con tu reputación digital.',
+  },
+  {
+    q: '¿Ofrecen mantenimiento y actualizaciones después de entregar el proyecto?',
+    a: 'Sí. Tienes dos opciones: servicio a necesidad por $150.000 COP cada vez, previa cita, o una anualidad de $600.000 COP que incluye cinco servicios de mantenimiento o actualización durante el año (cinco al precio de cuatro).',
+  },
+  {
+    q: '¿Cómo puedo contactar a Praxia Labs?',
+    a: 'Escríbenos por WhatsApp al +57 321 790 8685 o al correo praxialabsm@gmail.com. También estamos en Instagram y TikTok como @praxialabs. Te ayudamos a elegir por dónde empezar, sin compromiso.',
+  },
+]

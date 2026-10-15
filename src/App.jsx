@@ -5,6 +5,7 @@ import Servicios from './components/Servicios'
 import { NivelesIA } from './components/Tiers'
 import Paquetes from './components/Paquetes'
 import Mantenimiento from './components/Mantenimiento'
+import Faq from './components/Faq'
 import Nosotros from './components/Nosotros'
 import CtaBand from './components/CtaBand'
 import Footer from './components/Footer'
@@ -23,6 +24,7 @@ export default function App() {
         <NivelesIA />
         <Paquetes />
         <Mantenimiento />
+        <Faq />
         <Nosotros />
         <CtaBand />
       </main>
