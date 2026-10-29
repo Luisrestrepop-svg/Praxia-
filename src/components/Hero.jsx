@@ -1,5 +1,5 @@
 import { waLink } from '../data'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 // Ejemplo de conversación: el agente atiende, agenda y cobra.
 const messages = [
@@ -54,23 +54,36 @@ function Bubble({ m }) {
 }
 
 export default function Hero() {
-  // Se renderiza completa en el servidor (SEO) y se anima en el navegador.
+  // Se renderiza completa en el servidor (SEO) y se anima en el navegador,
+  // empezando cuando el teléfono entra en pantalla (importante en celular).
   const [shown, setShown] = useState(messages.length)
   const [typing, setTyping] = useState(false)
+  const phoneRef = useRef(null)
 
   useEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    const node = phoneRef.current
+    if (!node) return
+    // Con "reducir movimiento" también se desarrolla la conversación (es contenido),
+    // pero una sola vez y sin repetirse en bucle.
+    const loop = !window.matchMedia('(prefers-reduced-motion: reduce)').matches
     let timers = []
-    let cancelled = false
-    const at = (fn, ms) => timers.push(setTimeout(() => !cancelled && fn(), ms))
+    let running = false
+
+    const clear = () => {
+      timers.forEach(clearTimeout)
+      timers = []
+      running = false
+    }
+    const at = (fn, ms) => timers.push(setTimeout(fn, ms))
 
     const run = () => {
+      clear()
+      running = true
       setShown(0)
       setTyping(false)
       let t = 600
       messages.forEach((m, i) => {
         if (m.side === 'out') {
-          // el agente "escribe" y luego responde; las tarjetas salen sin pausa larga
           const wait = m.kind === 'pago' ? 500 : TYPING
           at(() => setTyping(true), t)
           t += wait
@@ -81,12 +94,26 @@ export default function Hero() {
           at(() => setShown(i + 1), t)
         }
       })
-      at(run, t + END_PAUSE)
+      if (loop) at(run, t + END_PAUSE)
+      else at(() => { running = false }, t)
     }
-    run()
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          if (!running) run()
+        } else {
+          clear()
+          setTyping(false)
+          setShown(messages.length)
+        }
+      },
+      { threshold: 0.4 }
+    )
+    observer.observe(node)
     return () => {
-      cancelled = true
-      timers.forEach(clearTimeout)
+      observer.disconnect()
+      clear()
     }
   }, [])
 
@@ -105,7 +132,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="mx-auto">
+        <div ref={phoneRef} className="mx-auto">
           <div
             role="img"
             aria-label="Ejemplo de conversación de WhatsApp con un agente de IA que responde, agenda una cita y recibe el pago"
