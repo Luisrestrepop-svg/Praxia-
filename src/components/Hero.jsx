@@ -1,28 +1,93 @@
 import { waLink } from '../data'
-import { useEffect, useRef } from 'react'
+import { useEffect, useState } from 'react'
 
-const bubbles = [
-  { side: 'in', text: '¿Tienen la chaqueta azul en M?' },
-  { side: 'out', text: '¡Sí! Aquí está 🙌' },
-  { side: 'out', text: '¿Te la envío mañana?' },
-  { side: 'in', text: 'Sí, dale' },
+// Ejemplo de conversación: el agente atiende, agenda y cobra.
+const messages = [
+  { side: 'in', text: '¿Tienen la chaqueta azul en talla M?' },
+  { side: 'out', text: '¡Sí! Está disponible 🙌 Cuesta $120.000. ¿Quieres pasar a probártela?' },
+  { side: 'in', text: 'Sí, mañana si se puede' },
+  { side: 'out', text: 'Claro. Mañana tengo libre a las 10:00 a. m. y a las 4:00 p. m. ¿Cuál prefieres?' },
+  { side: 'in', text: 'A las 4' },
+  { side: 'out', kind: 'cita', title: 'Cita confirmada', detail: 'Mañana · 4:00 p. m.', text: 'Te enviaré un recordatorio.' },
+  { side: 'in', text: '¿La puedo pagar ya para que me la separen?' },
+  { side: 'out', text: '¡Claro! Aquí está tu enlace de pago seguro 👇' },
+  { side: 'out', kind: 'pago', title: 'Pagar $120.000', detail: 'Enlace de pago seguro' },
+  { side: 'in', text: 'Listo, ya pagué 😊' },
+  { side: 'out', text: '¡Recibido! Tu chaqueta queda separada. Te esperamos mañana a las 4:00 p. m. 🙌' },
 ]
 
+const GAP_IN = 1500 // pausa antes de un mensaje del cliente
+const TYPING = 1000 // tiempo que "escribe" el agente
+const END_PAUSE = 5000 // pausa al terminar antes de repetir
+
+function Bubble({ m }) {
+  const base = 'bubble max-w-[82%] rounded-[14px] px-[13px] py-2.5 text-[13px] leading-[1.4]'
+  const side =
+    m.side === 'in'
+      ? 'self-start rounded-bl-[4px] bg-white text-[#1B2733] shadow-[0_2px_6px_rgba(0,0,0,0.08)]'
+      : 'self-end rounded-br-[4px] bg-[#0F9E8B] text-white'
+  if (m.kind === 'cita') {
+    return (
+      <div className={`${base} ${side}`}>
+        <div className="flex items-center gap-1.5 font-semibold">
+          <span aria-hidden="true">✅</span> {m.title}
+        </div>
+        <div className="mt-1 rounded-lg bg-white/15 px-2.5 py-1.5 text-[12.5px] font-semibold">📅 {m.detail}</div>
+        <div className="mt-1.5 text-[12.5px] opacity-90">{m.text}</div>
+      </div>
+    )
+  }
+  if (m.kind === 'pago') {
+    return (
+      <div className={`${base} ${side}`}>
+        <div className="flex items-center gap-2 rounded-lg bg-white px-3 py-2 text-[#0F6E60]">
+          <span aria-hidden="true" className="text-base">💳</span>
+          <div>
+            <div className="text-[13px] font-semibold">{m.title}</div>
+            <div className="text-[11.5px] opacity-80">{m.detail}</div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+  return <div className={`${base} ${side}`}>{m.text}</div>
+}
+
 export default function Hero() {
-  const chatRef = useRef(null)
+  // Se renderiza completa en el servidor (SEO) y se anima en el navegador.
+  const [shown, setShown] = useState(messages.length)
+  const [typing, setTyping] = useState(false)
 
   useEffect(() => {
-    const play = () => {
-      const chat = chatRef.current
-      if (!chat) return
-      const els = chat.querySelectorAll('.bubble')
-      els.forEach((b) => b.classList.remove('play'))
-      void chat.offsetWidth
-      els.forEach((b) => b.classList.add('play'))
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    let timers = []
+    let cancelled = false
+    const at = (fn, ms) => timers.push(setTimeout(() => !cancelled && fn(), ms))
+
+    const run = () => {
+      setShown(0)
+      setTyping(false)
+      let t = 600
+      messages.forEach((m, i) => {
+        if (m.side === 'out') {
+          // el agente "escribe" y luego responde; las tarjetas salen sin pausa larga
+          const wait = m.kind === 'pago' ? 500 : TYPING
+          at(() => setTyping(true), t)
+          t += wait
+          at(() => { setTyping(false); setShown(i + 1) }, t)
+          t += 700
+        } else {
+          t += GAP_IN
+          at(() => setShown(i + 1), t)
+        }
+      })
+      at(run, t + END_PAUSE)
     }
-    play()
-    const id = setInterval(play, 6500)
-    return () => clearInterval(id)
+    run()
+    return () => {
+      cancelled = true
+      timers.forEach(clearTimeout)
+    }
   }, [])
 
   return (
@@ -40,42 +105,39 @@ export default function Hero() {
           </div>
         </div>
 
-        <div
-          role="img"
-          aria-label="Ejemplo de conversación de WhatsApp automatizada con una tienda"
-          className="mx-auto w-[280px] rounded-[32px] border border-white/10 p-3.5 shadow-deep"
-          style={{ background: 'linear-gradient(165deg,#2A303A,#181B20)' }}
-        >
-          <div className="flex h-[520px] flex-col overflow-hidden rounded-[20px] bg-[#EAF6F3]">
-            <div className="flex items-center gap-2.5 bg-[#0F9E8B] px-4 py-3.5 text-sm font-semibold text-white">
-              <span className="h-2 w-2 rounded-full bg-white opacity-70" /> Tienda Doña Marta
-            </div>
-            <div ref={chatRef} className="chat flex flex-1 flex-col gap-2.5 overflow-hidden p-4">
-              {bubbles.map((b, i) => (
-                <div
-                  key={i}
-                  className={`bubble max-w-[80%] rounded-[14px] px-[13px] py-2.5 text-[13px] leading-[1.4] ${
-                    b.side === 'in'
-                      ? 'self-start rounded-bl-[4px] bg-white text-[#1B2733] shadow-[0_2px_6px_rgba(0,0,0,0.08)]'
-                      : 'self-end rounded-br-[4px] bg-[#0F9E8B] text-white'
-                  }`}
-                >
-                  {b.text}
-                </div>
-              ))}
-              <div className="bubble self-start rounded-[14px] bg-white px-4 py-3">
-                <div>
-                  {[0, 0.2, 0.4].map((d) => (
-                    <span
-                      key={d}
-                      className="mr-[3px] inline-block h-[5px] w-[5px] animate-blink rounded-full bg-[#8A97A6]"
-                      style={{ animationDelay: `${d}s` }}
-                    />
-                  ))}
-                </div>
+        <div className="mx-auto">
+          <div
+            role="img"
+            aria-label="Ejemplo de conversación de WhatsApp con un agente de IA que responde, agenda una cita y recibe el pago"
+            className="mx-auto w-[290px] rounded-[32px] border border-white/10 p-3.5 shadow-deep"
+            style={{ background: 'linear-gradient(165deg,#2A303A,#181B20)' }}
+          >
+            <div className="flex h-[540px] flex-col overflow-hidden rounded-[20px] bg-[#EAF6F3]">
+              <div className="flex items-center gap-2.5 bg-[#0F9E8B] px-4 py-3.5 text-sm font-semibold text-white">
+                <span className="h-2 w-2 rounded-full bg-white opacity-70" /> Tienda Doña Marta
+                <span className="ml-auto text-[11px] font-medium opacity-80">agente de IA</span>
+              </div>
+              <div className="chat flex flex-1 flex-col justify-end gap-2.5 overflow-hidden p-4">
+                {messages.slice(0, shown).map((m, i) => (
+                  <Bubble key={i} m={m} />
+                ))}
+                {typing && (
+                  <div className="bubble self-end rounded-[14px] rounded-br-[4px] bg-[#0F9E8B] px-4 py-3">
+                    <div>
+                      {[0, 0.2, 0.4].map((d) => (
+                        <span
+                          key={d}
+                          className="mr-[3px] inline-block h-[5px] w-[5px] animate-blink rounded-full bg-white/80"
+                          style={{ animationDelay: `${d}s` }}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
+          <p className="mt-3 text-center text-[12.5px] text-muted">Ejemplo ilustrativo: el agente atiende, agenda y cobra.</p>
         </div>
       </div>
     </section>

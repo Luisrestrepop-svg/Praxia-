@@ -93,14 +93,8 @@
     box-shadow: var(--shadow-medium), var(--shadow-glow-blue), inset 0 1px 0 rgba(255, 255, 255, 0.06);
   }
 
-  /* Hero chat: cada burbuja entra escalonada */
-  .chat .bubble { opacity: 0; transform: translateY(10px); }
-  .chat .bubble.play { animation: var(--animate-bubble-in); }
-  .chat .bubble:nth-child(1).play { animation-delay: 0.2s; }
-  .chat .bubble:nth-child(2).play { animation-delay: 1.1s; }
-  .chat .bubble:nth-child(3).play { animation-delay: 2s; }
-  .chat .bubble:nth-child(4).play { animation-delay: 2.9s; }
-  .chat .bubble:nth-child(5).play { animation-delay: 3.7s; }
+  /* Hero chat: cada burbuja entra al aparecer */
+  .chat .bubble { opacity: 0; transform: translateY(10px); animation: var(--animate-bubble-in); }
 }
 
 @media (prefers-reduced-motion: reduce) {
