@@ -1,12 +1,12 @@
-import { plans, waLink } from '../data'
+import { plans, waLink, PROMO_END } from '../data'
 
 export default function Paquetes() {
   return (
     <section className="section bg-bg-alt text-white" id="paquetes">
       <div className="wrap">
-        <h2 className="mb-3.5 text-[32px] !text-white">Paquetes sugeridos</h2>
+        <h2 className="mb-3.5 text-[32px] !text-white">Paquetes con ahorro</h2>
         <p className="mb-12 max-w-[600px] text-[17px] text-[#9AA6B8]">
-          Si prefieres no armar tu propia combinación, empieza con uno de estos y crece a tu ritmo.
+          Combina servicios y paga menos. Si prefieres no armar tu propia combinación, empieza con uno de estos y crece a tu ritmo.
         </p>
         <div className="grid gap-6 min-[901px]:grid-cols-3">
           {plans.map((p) => (
@@ -37,7 +37,7 @@ export default function Paquetes() {
               <div className="mb-4 text-sm text-[#8FA3C0]">{p.tag}</div>
               <div className="mb-6 font-display text-[26px] font-semibold text-amber">
                 {p.price}
-                <span className="mt-0.5 block font-sans text-[12.5px] font-medium text-[#8FA3C0]">Pago único</span>
+                <span className="mt-0.5 block font-sans text-[12.5px] font-medium text-[#8FA3C0]">Pago único · {p.save}</span>
               </div>
               <ul className="mb-7 flex flex-1 flex-col gap-3">
                 {p.feats.map((f) => (
@@ -61,7 +61,7 @@ export default function Paquetes() {
           ))}
         </div>
         <p className="mt-8 max-w-[760px] text-[14px] leading-relaxed text-[#9AA6B8]">
-          Los precios no incluyen servicios de terceros como dominio, hosting o WhatsApp. El mantenimiento mensual de la web y el SEO local continuo son opcionales y se cotizan aparte.
+          Los precios de Crecimiento y Todo en uno incluyen servicios con descuento y son válidos hasta el {PROMO_END}. No incluyen servicios de terceros: la suscripción de Meta, el dominio, el hosting, la comisión de la pasarela de pagos ni la inversión en anuncios. El mantenimiento de la web y el acompañamiento mensual son opcionales y se cotizan aparte.
         </p>
       </div>
     </section>

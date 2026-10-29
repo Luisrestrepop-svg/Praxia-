@@ -1,37 +1,49 @@
 # Praxia Labs
 
-> Praxia Labs es un equipo de Medellín, Colombia, que ayuda a tiendas, restaurantes y negocios de barrio a digitalizarse: automatización de WhatsApp con chatbots e inteligencia artificial, posicionamiento en Google (Google Business Profile y SEO local), páginas web y catálogos en línea, y gestión de redes sociales. Acompañamiento cercano y sin tecnicismos, también para dueños que nunca han usado estas herramientas.
+> Praxia Labs es un equipo de Medellín, Colombia, que ayuda a tiendas, restaurantes y negocios de barrio a atender, vender y crecer en lo digital: WhatsApp Business con agenda y pagos, páginas web y catálogos, análisis de datos, y redes sociales y publicidad. Acompañamiento cercano y sin tecnicismos, también para dueños que nunca han usado estas herramientas.
 
 Sitio web: https://www.praxialabs.store/
-Contacto: WhatsApp +57 321 790 8685 · praxialabsm@gmail.com
+Contacto: WhatsApp +57 321 790 8586 · praxialabsm@gmail.com
 Redes: https://www.instagram.com/praxialabs · https://www.tiktok.com/@praxialabs
 Idioma: español (Colombia). Moneda: pesos colombianos (COP).
 
-## Servicios
+## 1. WhatsApp Business con agenda y pagos
 
-- Atención al cliente y ventas: automatización de WhatsApp, asistente virtual para redes sociales, línea de atención con IA por voz.
-- Presencia digital y contenido: página web o catálogo en línea, optimización de Google Business Profile, contenido para redes con IA, gestión mensual de redes sociales.
-- Posicionamiento y crecimiento: SEO local básico, campañas de anuncios locales (Meta Ads), reputación digital.
+Los niveles se suman:
+- Esencial: $500.000 COP, precio base. WhatsApp Business bien configurado y agente de IA entrenado con la información del negocio.
+- Agenda: se suma al Esencial por $1.500.000 COP (total $2.000.000). Citas con confirmación y recordatorios automáticos. Esencial + Agenda con 15% de descuento: $1.700.000 COP, válido hasta el 15 de noviembre de 2026.
+- Pagos: se suma por $500.000 COP (total desde $2.500.000 sin descuento). Enlace de pago por una pasarela y registro de cada venta.
+- Acompañamiento mensual opcional: $250.000 COP al mes.
+- Costos de terceros que paga el cliente directo: la suscripción de Meta al agente de IA de WhatsApp Business (desde unos $35.990 COP al mes, la primera semana es gratis; el precio puede variar) y la comisión de la pasarela de pagos.
 
-## Chatbots de WhatsApp (precios de referencia)
+## 2. Página web y catálogos
 
-- Chatbot con respuestas fijas (reglas): $500.000 COP, pago único, listo en 1–2 semanas. Menú de opciones, respuestas predefinidas y flujos básicos.
-- Chatbot con IA conversacional: $1.500.000 COP, listo en 3–6 semanas. Responde preguntas abiertas, entiende el contexto e integra WhatsApp Business.
-- Agente autónomo con integraciones: desde $2.000.000 COP según la complejidad, listo en 6–12 semanas. Califica leads, actualiza el CRM, agenda citas y razona de forma autónoma.
-- Si hay que crear la cuenta de WhatsApp Business API desde cero, suma entre 1 y 2 semanas.
-- No incluyen servicios de terceros (WhatsApp, la IA elegida, almacenamiento de datos), que se pagan aparte al proveedor.
+- Página web básica: desde $1.200.000 COP. Una página, hasta 4 secciones, botón de WhatsApp y ficha de Google Business Profile.
+- Página web completa: desde $1.800.000 COP. Hasta 5 secciones, formulario, SEO local básico y medición.
+- Web con tienda: desde $2.800.000 COP con 20% de descuento hasta el 15 de noviembre de 2026 (precio normal desde $3.500.000 COP).
+- El valor final depende de las especificaciones del cliente. Dominio y hosting aparte.
+- Mantenimiento: $150.000 COP por servicio (previa cita) o anualidad de $600.000 COP por 5 servicios al año.
 
-## Paquetes (pago único)
+## 3. Análisis de datos
 
-- Da el salto digital: $1.500.000 COP. WhatsApp automatizado y posicionamiento en Google (ficha + SEO local).
-- Presencia completa: $3.200.000 COP. Todo lo del paquete inicial más página web o catálogo en línea.
+- Diagnóstico: $400.000 COP. Informe con 5 acciones.
+- Tablero de resultados: $1.200.000 COP. Conversaciones, citas, ventas, costo por cliente y anuncios.
+- Informe mensual: $300.000 COP al mes.
+
+## 4. Redes sociales y publicidad
+
 - Impulso visual: $220.000 COP. 4 piezas publicitarias por el precio de 3, con fotos de producto mejoradas con IA.
-- No incluyen dominio, hosting ni WhatsApp. El mantenimiento mensual de la web y el SEO local continuo son opcionales y se cotizan aparte.
+- Anuncios que abren WhatsApp: $600.000 COP al mes, más la inversión en anuncios que paga el cliente a Meta.
+- Contenido y redes: desde $600.000 COP al mes.
+- Todo en uno (anuncios, contenido e informe mensual): desde $1.200.000 COP al mes.
 
-## Mantenimiento y actualización
+## Paquetes
 
-- Servicio a necesidad: $150.000 COP por servicio, previa cita.
-- Anualidad: $600.000 COP por 5 servicios al año (5 al precio de 4).
+- Arranque: desde $1.500.000 COP. WhatsApp Esencial y página web básica.
+- Crecimiento: $2.900.000 COP. Esencial + Agenda (con 15% de descuento), página web básica e Impulso visual.
+- Todo en uno: $5.600.000 COP. Esencial + Agenda + Pagos, web con tienda (con 20% de descuento) y tablero de resultados.
+- Los precios de Crecimiento y Todo en uno incluyen servicios con descuento y son válidos hasta el 15 de noviembre de 2026.
+- No incluyen servicios de terceros: suscripción de Meta, dominio, hosting, comisión de la pasarela ni inversión en anuncios.
 
 ## Más información
 

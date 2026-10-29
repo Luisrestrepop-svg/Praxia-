@@ -9,6 +9,7 @@ import Faq from './components/Faq'
 import Nosotros from './components/Nosotros'
 import CtaBand from './components/CtaBand'
 import Footer from './components/Footer'
+import WhatsAppFloat from './components/WhatsAppFloat'
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
         <CtaBand />
       </main>
       <Footer />
+      <WhatsAppFloat />
     </>
   )
 }

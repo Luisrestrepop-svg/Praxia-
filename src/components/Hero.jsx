@@ -32,7 +32,7 @@ export default function Hero() {
           <h1 className="mb-5 text-[34px] tracking-[-0.5px] sm:text-5xl">Actualiza tu negocio y no pierdas más clientes</h1>
           <p className="-mt-2.5 mb-5 text-[17px] font-semibold text-amber">Automatización sin barreras</p>
           <p className="mb-8 max-w-[480px] text-lg text-muted">
-            Automatizamos tu WhatsApp, te ponemos en el mapa de Google y te ayudamos a vender más — explicándote cada paso, sin tecnicismos.
+            Conectamos tu WhatsApp con tu agenda y tus pagos, creamos tu página web, medimos lo que funciona y te traemos más clientes — explicándote cada paso, sin tecnicismos.
           </p>
           <div className="flex flex-wrap gap-3.5">
             <a href={waLink()} target="_blank" rel="noopener noreferrer" className="btn btn-amber">Habla con nosotros por WhatsApp</a>

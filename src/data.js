@@ -1,33 +1,71 @@
-// Iconos SVG (paths) para servicios
+// Servicios de Praxia Labs (estructura 2026) · precios en pesos colombianos (COP)
+export const PROMO_END = '15 de noviembre de 2026'
+
 export const services = [
   {
-    letter: 'A',
-    title: 'Atención al cliente y ventas',
-    items: [
-      { name: 'Automatización de WhatsApp', level: 1, icon: 'M21 11.5a8.4 8.4 0 01-8.4 8.4 8.3 8.3 0 01-3.9-1L3 20l1.2-5.6a8.3 8.3 0 01-1-3.9A8.4 8.4 0 0111.6 2a8.4 8.4 0 019.4 8.4z' },
-      { name: 'Asistente virtual para redes sociales', level: 2, icon: 'M3 7a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2zM3 8l9 6 9-6' },
-      { name: 'Línea de atención con IA por voz', level: 3, icon: 'M3 5a2 2 0 012-2h3l2 5-2.5 1.5a11 11 0 005 5L14 12l5 2v3a2 2 0 01-2 2A16 16 0 013 5z' },
+    id: 'whatsapp',
+    number: '1',
+    title: 'WhatsApp Business con agenda y pagos',
+    summary: 'Un agente de IA entrenado con tu negocio, conectado a tu agenda y a tus cobros. Armas tu plan por niveles: cada nivel se suma al anterior.',
+    icon: 'M21 11.5a8.4 8.4 0 01-8.4 8.4 8.3 8.3 0 01-3.9-1L3 20l1.2-5.6a8.3 8.3 0 01-1-3.9A8.4 8.4 0 0111.6 2a8.4 8.4 0 019.4 8.4z',
+    plans: [
+      { name: 'Esencial', desc: 'WhatsApp Business bien configurado y agente de IA entrenado con la información de tu negocio.', price: '$500.000 COP', priceNote: 'Precio base · pago único', priceValue: 500000 },
+      { name: '+ Agenda', desc: 'Citas con confirmación y recordatorios automáticos, conectadas a tu calendario.', price: '+ $1.500.000 COP', priceNote: 'Se suma al Esencial · total $2.000.000', priceValue: 1500000 },
+      { name: '+ Pagos', desc: 'Enlace de pago por la pasarela que elijas y registro de cada venta.', price: '+ $500.000 COP', priceNote: 'Se suma a Esencial + Agenda · total desde $2.500.000', priceValue: 500000 },
     ],
   },
   {
-    letter: 'B',
-    title: 'Presencia digital y contenido',
-    items: [
-      { name: 'Página web o catálogo en línea', level: 1, icon: 'M12 3a9 9 0 100 18 9 9 0 000-18zM3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18' },
-      { name: 'Optimización de Google Business Profile', level: 1, icon: 'M12 21s7-6.5 7-11.5A7 7 0 105 9.5C5 14.5 12 21 12 21zM12 7.2a2.3 2.3 0 100 4.6 2.3 2.3 0 000-4.6z' },
-      { name: 'Contenido para redes con IA', level: 2, icon: 'M5 6h14a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2zM8 6l1.5-2h5L16 6M12 9.2a3.3 3.3 0 100 6.6 3.3 3.3 0 000-6.6z' },
-      { name: 'Gestión mensual de redes sociales', level: 2, icon: 'M4 4h16v12H8l-4 4z' },
+    id: 'web',
+    number: '2',
+    title: 'Página web y catálogos',
+    summary: 'Tu casa digital propia: te encuentran en Google y te escriben por WhatsApp.',
+    icon: 'M12 3a9 9 0 100 18 9 9 0 000-18zM3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18',
+    plans: [
+      { name: 'Página web básica', desc: 'Una página en tu propio dominio, hasta 4 secciones, botón de WhatsApp y ficha de Google Business Profile optimizada. Se ve bien en celular.', price: 'Desde $1.200.000 COP', priceNote: 'Según especificaciones', priceValue: 1200000 },
+      { name: 'Página web completa', desc: 'Hasta 5 secciones, formulario de contacto, SEO local básico y medición de visitas.', price: 'Desde $1.800.000 COP', priceNote: 'Según especificaciones', priceValue: 1800000 },
+      { name: 'Web con tienda', desc: 'Catálogo grande de productos, categorías y pagos en línea, conectados a WhatsApp.', oldPrice: 'Desde $3.500.000 COP', price: 'Desde $2.800.000 COP', priceNote: 'Según especificaciones', promo: '20% de descuento', priceValue: 2800000 },
     ],
   },
   {
-    letter: 'C',
-    title: 'Posicionamiento y crecimiento',
-    items: [
-      { name: 'SEO local básico', level: 2, icon: 'M11 4a7 7 0 100 14 7 7 0 000-14zM21 21l-4.3-4.3' },
-      { name: 'Campañas de anuncios locales (Meta Ads)', level: 3, icon: 'M12 3v10M6 8l6-5 6 5M4 14l8 7 8-7' },
-      { name: 'Reputación digital', level: 2, icon: 'M12 17.3l-6.2 3.3 1.2-6.9L2 8.9l7-1L12 1.5l3 6.4 7 1-5 4.8 1.2 6.9z' },
+    id: 'datos',
+    number: '3',
+    title: 'Análisis de datos',
+    summary: 'Sabe qué funciona: juntamos tus conversaciones de WhatsApp, citas, pagos y anuncios en un solo tablero.',
+    icon: 'M4 20V10M10 20V4M16 20v-7M22 20H2',
+    plans: [
+      { name: 'Diagnóstico', desc: 'Revisamos cómo llegan hoy tus clientes y tus ventas, qué se mide y qué no. Recibes un informe con 5 acciones.', price: '$400.000 COP', priceNote: 'Pago único', priceValue: 400000 },
+      { name: 'Tablero de resultados', desc: 'Un panel con conversaciones, citas, ventas, costo por cliente y rendimiento de tus anuncios.', price: '$1.200.000 COP', priceNote: 'Pago único', priceValue: 1200000 },
+      { name: 'Informe mensual', desc: 'Lectura de tus números, recomendaciones y una reunión de 30 minutos.', price: '$300.000 COP', priceNote: 'Al mes', priceValue: 300000 },
     ],
   },
+  {
+    id: 'redes',
+    number: '4',
+    title: 'Redes sociales y publicidad',
+    summary: 'Más gente que te escribe: anuncios que abren WhatsApp y contenido que da confianza.',
+    icon: 'M3 11l18-8v18L3 13zM7 14v6',
+    plans: [
+      { name: 'Impulso visual', desc: '4 piezas publicitarias por el precio de 3, con fotos de producto mejoradas con IA, listas para WhatsApp y redes.', price: '$220.000 COP', priceNote: 'Paga 3, lleva 4', promo: 'Promo', priceValue: 220000 },
+      { name: 'Anuncios que abren WhatsApp', desc: 'Creamos y gestionamos campañas en Facebook e Instagram, con el agente atendiendo los mensajes. La inversión en anuncios la pagas tú directo a Meta.', price: '$600.000 COP', priceNote: 'Al mes + inversión en anuncios', priceValue: 600000 },
+      { name: 'Contenido y redes', desc: 'Gestión mensual de tus redes sociales con contenido creado con IA.', price: 'Desde $600.000 COP', priceNote: 'Al mes', priceValue: 600000 },
+      { name: 'Todo en uno', desc: 'Anuncios, contenido e informe mensual en un solo plan.', price: 'Desde $1.200.000 COP', priceNote: 'Al mes', priceValue: 1200000 },
+    ],
+  },
+]
+
+// Esencial + Agenda con descuento
+export const combo = {
+  base: { name: 'Esencial', price: '$500.000 COP', text: 'Atiende: tu agente de IA responde las preguntas de tus clientes, a toda hora.' },
+  add: { name: 'Agenda', price: '+ $1.500.000 COP', text: 'Reserva: el cliente elige su horario y recibe confirmación y recordatorio automático.' },
+  total: { name: 'Juntos', oldPrice: '$2.000.000 COP', price: '$1.700.000 COP', save: 'Ahorras $300.000', text: 'Del primer mensaje a la cita confirmada, sin que coordines nada a mano.' },
+  pagos: { name: 'Pagos', price: '+ $500.000 COP', text: '¿Quieres cobrar por WhatsApp? Suma Pagos.' },
+}
+
+// Servicios adicionales y costos que se pagan aparte
+export const extras = [
+  { name: 'Acompañamiento mensual', price: '$250.000 COP al mes', text: 'Opcional: revisión de conversaciones, ajustes de respuestas y soporte.', optional: true, priceValue: 250000 },
+  { name: 'Suscripción de Meta', price: 'Desde $35.990 COP al mes', text: 'El agente de IA de WhatsApp Business lo ofrece Meta por suscripción mensual (la primera semana es gratis). Se paga directo a Meta; el precio puede variar e incluir impuestos.' },
+  { name: 'Pasarela de pagos', price: 'Comisión por cobro', text: 'Si conectas pagos, la pasarela que elijas cobra su comisión por cada transacción.' },
 ]
 
 export const whyItems = [
@@ -63,96 +101,62 @@ export const benefits = [
   },
 ]
 
-export const tiers = [
-  {
-    name: 'Chatbot con respuestas fijas (reglas)',
-    price: '$500.000 COP',
-    priceNote: 'Pago único',
-    time: '1–2 semanas',
-    includes: 'Diseño de flujos, configuración, pruebas y capacitación.',
-    label: 'Funcionalidades',
-    feats: ['Menú de opciones', 'Respuestas predefinidas', 'Flujos básicos'],
-    audience: 'Ideal si tus clientes suelen preguntar lo mismo: horarios, precios y ubicación.',
-  },
-  {
-    name: 'Chatbot con IA conversacional',
-    price: '$1.500.000 COP',
-    note: 'El valor no incluye los servicios de terceros que hacen funcionar el chatbot: WhatsApp, la inteligencia artificial que elijas y el almacenamiento de tus datos. Estos se pagan aparte, directamente al proveedor.',
-    label: 'Funcionalidades',
-    recommended: true,
-    time: '3–6 semanas',
-    includes: 'Desarrollo y entrenamiento, integración con WhatsApp Business API y pruebas extensas.',
-    feats: ['Responde preguntas abiertas', 'Entiende el contexto', 'Integración con WhatsApp Business'],
-    audience: 'Ideal si tus clientes hacen preguntas muy distintas y necesitas respuestas naturales, como las de una persona.',
-  },
-  {
-    name: 'Agente autónomo con integraciones',
-    price: '$2.000.000 COP',
-    priceNote: 'Desde · según especificaciones técnicas',
-    time: '6–12 semanas',
-    includes: 'Arquitectura completa, integraciones con sistemas externos, testing y documentación.',
-    note: 'Es un precio de referencia, ya que el valor final se define según la complejidad técnica de tu proyecto, como las integraciones con tus sistemas y las reglas de negocio a la medida. No incluye los servicios de terceros (WhatsApp, la inteligencia artificial que elijas y el almacenamiento de datos), que se pagan aparte.',
-    label: 'Funcionalidades',
-    feats: ['Califica leads', 'Actualiza CRM', 'Agenda citas', 'Razona de forma autónoma'],
-    audience: 'Ideal para empresas con procesos de ventas o soporte más complejos, que necesitan conectar varios sistemas.',
-  },
-]
-
 export const plans = [
   {
-    name: 'Da el salto digital',
-    tag: 'Paquete inicial',
-    price: '$1.500.000 COP',
-    feats: ['WhatsApp automatizado', 'Posicionamiento en Google (ficha + SEO local)'],
+    name: 'Arranque',
+    tag: 'Para empezar con lo básico',
+    price: 'Desde $1.500.000 COP',
+    save: 'Ahorras $200.000',
+    feats: ['WhatsApp Esencial (agente de IA entrenado)', 'Página web básica', 'Ficha de Google Business Profile'],
   },
   {
-    name: 'Presencia completa',
-    tag: 'Todo lo del inicial, y más',
-    price: '$3.200.000 COP',
+    name: 'Crecimiento',
+    tag: 'WhatsApp con agenda y web',
+    price: '$2.900.000 COP',
+    save: 'Ahorras $220.000',
     badge: 'Más elegido',
     featured: true,
-    feats: ['Todo el paquete inicial', 'Página web o catálogo en línea'],
+    feats: ['WhatsApp Esencial + Agenda (con 15% de descuento)', 'Página web básica', 'Impulso visual: 4 piezas por el precio de 3'],
   },
   {
-    name: 'Impulso visual',
-    tag: 'Creación de imágenes publicitarias',
-    price: '$220.000 COP',
-    badge: 'Paga 3, lleva 4',
-    promo: true,
-    feats: [
-      '4 piezas publicitarias por el precio de 3',
-      'Fotos de producto mejoradas con IA',
-      'Listas para WhatsApp y redes sociales',
-    ],
+    name: 'Todo en uno',
+    tag: 'Atiende, cobra, vende y mide',
+    price: '$5.600.000 COP',
+    save: 'Ahorras $600.000',
+    feats: ['WhatsApp Esencial + Agenda + Pagos', 'Web con tienda (con 20% de descuento)', 'Tablero de resultados'],
   },
 ]
 
 export const navLinks = [
   { href: '#servicios', label: 'Servicios' },
-  { href: '#automatizacion', label: 'Precios IA' },
+  { href: '#whatsapp', label: 'WhatsApp con IA' },
   { href: '#paquetes', label: 'Paquetes' },
   { href: '#nosotros', label: 'Nosotros' },
 ]
 
-export const WHATSAPP_DISPLAY = '+57 321 790 8685'
+export const WHATSAPP_DISPLAY = '+57 321 790 8586'
 export const EMAIL = 'praxialabsm@gmail.com'
 export const INSTAGRAM_URL = 'https://www.instagram.com/praxialabs'
 export const TIKTOK_URL = 'https://www.tiktok.com/@praxialabs'
 export const waLink = (msg = 'Hola, quiero más información sobre los servicios de Praxia Labs.') =>
-  `https://wa.me/573217908685?text=${encodeURIComponent(msg)}`
+  `https://wa.me/573217908586?text=${encodeURIComponent(msg)}`
 
 export const faqs = [
   {
     q: '¿Qué hace Praxia Labs?',
-    a: 'Praxia Labs es un equipo de Medellín que ayuda a tiendas, restaurantes y negocios de barrio a digitalizarse: automatizamos tu WhatsApp con chatbots e inteligencia artificial, te posicionamos en Google (Google Business Profile y SEO local), creamos tu página web o catálogo en línea y gestionamos tus redes sociales.',
+    a: 'Praxia Labs es un equipo de Medellín que ayuda a tiendas, restaurantes y negocios de barrio a atender, vender y crecer en lo digital. Tenemos cuatro servicios: WhatsApp Business con agenda y pagos, página web y catálogos, análisis de datos, y redes sociales y publicidad.',
   },
   {
-    q: '¿Cuánto cuesta un chatbot de WhatsApp para mi negocio?',
-    a: 'Tenemos tres niveles. El chatbot con respuestas fijas cuesta $500.000 COP (pago único), el chatbot con IA conversacional cuesta $1.500.000 COP y el agente autónomo con integraciones parte desde $2.000.000 COP según la complejidad de tu proyecto. Los servicios de terceros, como WhatsApp o la IA que elijas, se pagan aparte directamente al proveedor.',
+    q: '¿Cuánto cuesta automatizar mi WhatsApp?',
+    a: 'Se arma por niveles que se suman. El Esencial cuesta $500.000 COP (WhatsApp bien configurado y agente de IA entrenado con tu negocio). La Agenda se suma por $1.500.000 COP y deja las citas confirmadas con recordatorios automáticos: juntos son $2.000.000 COP, y hasta el 15 de noviembre de 2026 tienen 15% de descuento ($1.700.000 COP). Si además quieres cobrar por WhatsApp, el servicio de Pagos se suma por $500.000 COP.',
   },
   {
-    q: '¿Cuánto tarda en estar listo mi chatbot?',
-    a: 'El chatbot con respuestas fijas queda listo en 1 a 2 semanas, el chatbot con IA conversacional en 3 a 6 semanas y el agente autónomo en 6 a 12 semanas. Si hay que crear la cuenta de WhatsApp Business API desde cero, suma entre 1 y 2 semanas.',
+    q: '¿Qué es el agente de IA de Meta y qué cobra Meta?',
+    a: 'WhatsApp Business ofrece un agente de IA propio de Meta, que responde a tus clientes a toda hora. Meta lo cobra por suscripción mensual (la primera semana es gratis, y en Colombia los planes parten desde unos $35.990 COP al mes; el precio puede variar). Se paga directo a Meta. Nosotros lo configuramos, lo entrenamos con la información de tu negocio y lo conectamos con tu agenda y tus pagos, que es lo que Meta no hace por ti.',
+  },
+  {
+    q: '¿Cuánto cuesta una página web?',
+    a: 'La página web básica parte desde $1.200.000 COP, la completa desde $1.800.000 COP y la web con tienda desde $2.800.000 COP (con 20% de descuento hasta el 15 de noviembre de 2026; precio normal desde $3.500.000 COP). El valor final depende de las especificaciones de tu negocio: secciones, productos, pagos en línea, textos o fotos que haya que crear. Te cotizamos por escrito antes de empezar.',
   },
   {
     q: '¿Necesito saber de tecnología para trabajar con ustedes?',
@@ -160,22 +164,26 @@ export const faqs = [
   },
   {
     q: '¿Qué incluyen los paquetes y cuánto cuestan?',
-    a: '“Da el salto digital” cuesta $1.500.000 COP e incluye WhatsApp automatizado y posicionamiento en Google (ficha + SEO local). “Presencia completa” cuesta $3.200.000 COP y suma una página web o catálogo en línea. “Impulso visual” cuesta $220.000 COP e incluye 4 piezas publicitarias por el precio de 3, con fotos de producto mejoradas con IA. Son pagos únicos.',
+    a: '“Arranque” cuesta desde $1.500.000 COP: WhatsApp Esencial y página web básica. “Crecimiento” cuesta $2.900.000 COP: Esencial + Agenda, página web básica e Impulso visual. “Todo en uno” cuesta $5.600.000 COP: Esencial + Agenda + Pagos, web con tienda y tablero de resultados. Los precios de Crecimiento y Todo en uno incluyen servicios con descuento y son válidos hasta el 15 de noviembre de 2026.',
   },
   {
-    q: '¿Los precios incluyen dominio, hosting o WhatsApp?',
-    a: 'No. Los precios no incluyen servicios de terceros como dominio, hosting, WhatsApp, la inteligencia artificial que elijas ni el almacenamiento de datos. Estos se pagan aparte, directamente al proveedor. El mantenimiento mensual de la web y el SEO local continuo son opcionales y se cotizan aparte.',
+    q: '¿Los precios incluyen dominio, hosting, Meta o la pasarela de pagos?',
+    a: 'No. Los precios no incluyen servicios de terceros: la suscripción de Meta al agente de IA, el dominio y el hosting de tu web, la comisión de la pasarela de pagos ni la inversión en anuncios. Estos se pagan aparte, directamente al proveedor, y te los explicamos antes de empezar.',
   },
   {
-    q: '¿Hacen SEO local y optimizan Google Business Profile en Medellín?',
-    a: 'Sí. Optimizamos tu ficha de Google Business Profile y hacemos SEO local básico para que tus clientes de tu comuna y tu barrio te encuentren cuando busquen en Google y Google Maps. También ayudamos con tu reputación digital.',
+    q: '¿Qué es el análisis de datos y para qué me sirve?',
+    a: 'Es saber qué funciona en tu negocio. Juntamos tus conversaciones de WhatsApp, citas, pagos y anuncios en un solo tablero para que veas cuántos clientes llegan, cuántos compran y cuánto te cuesta cada uno. Puedes empezar con un diagnóstico de $400.000 COP.',
   },
   {
-    q: '¿Ofrecen mantenimiento y actualizaciones después de entregar el proyecto?',
-    a: 'Sí. Tienes dos opciones: servicio a necesidad por $150.000 COP cada vez, previa cita, o una anualidad de $600.000 COP que incluye cinco servicios de mantenimiento o actualización durante el año (cinco al precio de cuatro).',
+    q: '¿Hacen anuncios y manejan redes sociales?',
+    a: 'Sí. Creamos y gestionamos campañas en Facebook e Instagram que abren una conversación en tu WhatsApp ($600.000 COP al mes, más la inversión en anuncios que pagas a Meta), y gestionamos tus redes con contenido creado con IA desde $600.000 COP al mes.',
+  },
+  {
+    q: '¿Ofrecen mantenimiento y acompañamiento después de entregar el proyecto?',
+    a: 'Sí. Para tu web tienes dos opciones: servicio a necesidad por $150.000 COP cada vez, previa cita, o una anualidad de $600.000 COP con cinco servicios durante el año (cinco al precio de cuatro). Para WhatsApp ofrecemos un acompañamiento mensual opcional de $250.000 COP.',
   },
   {
     q: '¿Cómo puedo contactar a Praxia Labs?',
-    a: 'Escríbenos por WhatsApp al +57 321 790 8685 o al correo praxialabsm@gmail.com. También estamos en Instagram y TikTok como @praxialabs. Te ayudamos a elegir por dónde empezar, sin compromiso.',
+    a: 'Escríbenos por WhatsApp al +57 321 790 8586 o al correo praxialabsm@gmail.com. También estamos en Instagram y TikTok como @praxialabs. Te ayudamos a elegir por dónde empezar, sin compromiso.',
   },
 ]

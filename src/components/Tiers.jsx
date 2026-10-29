@@ -1,61 +1,13 @@
-import { benefits, tiers } from '../data'
-
-function TierGrid({ items }) {
-  return (
-    <div className="grid gap-5 min-[901px]:grid-cols-3">
-      {items.map((t) => (
-        <div
-          key={t.name}
-          className={`card-grad hover-lift relative flex flex-col rounded-[20px] px-6 py-[26px] hover:-translate-y-[3px] ${
-            t.recommended
-              ? '!border-amber/50 shadow-[var(--shadow-medium),var(--shadow-glow-amber),inset_0_1px_0_rgba(255,255,255,0.06)]'
-              : 'shadow-[var(--shadow-soft),inset_0_1px_0_rgba(255,255,255,0.04)]'
-          }`}
-        >
-          <div className="mb-2.5 text-lg font-semibold text-navy">{t.name}</div>
-          <div className="mb-4 font-display text-[19px] font-semibold text-amber">
-            {t.price}
-            {t.priceNote && <span className="mt-0.5 block font-sans text-[12.5px] font-medium text-muted">{t.priceNote}</span>}
-          </div>
-          {t.time && (
-            <div className="mb-5 rounded-lg bg-white/[0.05] px-3 py-2.5">
-              <div className="flex items-center gap-2 text-sm font-semibold text-navy">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-teal" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 3" /></svg>
-                Listo en {t.time}
-              </div>
-              <p className="mt-1 text-[12.5px] leading-normal text-muted">Incluye: {t.includes}</p>
-            </div>
-          )}
-          <div className="mb-2 text-[12.5px] font-semibold uppercase tracking-[0.04em] text-muted">{t.label}</div>
-          <ul className="mb-5 flex flex-col gap-2">
-            {t.feats.map((f) => (
-              <li key={f} className="relative pl-[18px] text-sm before:absolute before:left-0 before:top-[7px] before:h-1.5 before:w-1.5 before:rounded-full before:bg-teal">
-                {f}
-              </li>
-            ))}
-          </ul>
-          {t.note && (
-            <p className="mb-5 rounded-lg border border-amber/25 bg-amber/10 px-3 py-2.5 text-[13px] leading-normal text-[#FFD9A3]">
-              <span className="font-semibold">Nota:</span> {t.note}
-            </p>
-          )}
-          {t.audience && (
-            <div className="mt-auto border-t border-white/10 pt-3.5 text-[13.5px] leading-normal text-muted">{t.audience}</div>
-          )}
-        </div>
-      ))}
-    </div>
-  )
-}
+import { benefits, combo, extras, PROMO_END, waLink } from '../data'
 
 export function NivelesIA() {
   return (
-    <section className="section" id="automatizacion">
+    <section className="section" id="whatsapp">
       <div className="wrap">
-        <div className="mb-10 max-w-[640px]">
-          <h2 className="mb-3.5 text-[32px]">Niveles de automatización con IA</h2>
+        <div className="mb-10 max-w-[680px]">
+          <h2 className="mb-3.5 text-[32px]">WhatsApp con IA: arma tu plan por niveles</h2>
           <p className="text-[17px] text-muted">
-            Dentro de la automatización de WhatsApp, hay distintos niveles según qué tan compleja necesites que sea la conversación con tus clientes.
+            WhatsApp Business ya trae un agente de IA de Meta. Nosotros lo configuramos, lo entrenamos con tu negocio y lo conectamos con lo que Meta no conecta por ti: tu agenda y tus pagos.
           </p>
         </div>
 
@@ -71,10 +23,66 @@ export function NivelesIA() {
           ))}
         </div>
 
-        <TierGrid items={tiers} />
+        <h3 className="mb-5 text-[22px] font-semibold text-navy">Dos servicios que se suman: mira qué ganas al juntarlos</h3>
+        <div className="grid items-stretch gap-4 min-[901px]:grid-cols-[1fr_auto_1fr_auto_1.15fr]">
+          <div className="card-grad rounded-[20px] px-6 py-6 shadow-[var(--shadow-soft),inset_0_1px_0_rgba(255,255,255,0.04)]">
+            <div className="text-sm font-semibold uppercase tracking-[0.04em] text-teal">{combo.base.name} · atiende</div>
+            <p className="mt-2 text-[15px] text-body">{combo.base.text}</p>
+            <div className="mt-4 font-display text-[24px] font-semibold text-amber">{combo.base.price}</div>
+            <div className="text-[12.5px] text-muted">Precio base</div>
+          </div>
+          <div className="flex items-center justify-center font-display text-[34px] font-bold text-amber" aria-hidden="true">+</div>
+          <div className="card-grad rounded-[20px] px-6 py-6 shadow-[var(--shadow-soft),inset_0_1px_0_rgba(255,255,255,0.04)]">
+            <div className="text-sm font-semibold uppercase tracking-[0.04em] text-teal">{combo.add.name} · reserva</div>
+            <p className="mt-2 text-[15px] text-body">{combo.add.text}</p>
+            <div className="mt-4 font-display text-[24px] font-semibold text-amber">{combo.add.price}</div>
+            <div className="text-[12.5px] text-muted">Se suma al Esencial</div>
+          </div>
+          <div className="flex items-center justify-center font-display text-[34px] font-bold text-amber" aria-hidden="true">=</div>
+          <div className="card-grad relative rounded-[20px] px-6 py-6 !border-amber/50 shadow-[var(--shadow-medium),var(--shadow-glow-amber),inset_0_1px_0_rgba(255,255,255,0.06)]">
+            <span
+              className="absolute -top-[13px] left-6 rounded-[20px] px-3 py-[5px] text-xs font-semibold text-[#0C2622] shadow-soft"
+              style={{ background: 'linear-gradient(160deg,#4FE8CF,#3FE0C7)' }}
+            >
+              15% de descuento
+            </span>
+            <div className="text-sm font-semibold uppercase tracking-[0.04em] text-amber">{combo.total.name} · completo</div>
+            <p className="mt-2 text-[15px] text-body">{combo.total.text}</p>
+            <div className="mt-4 text-[13px] text-muted line-through">{combo.total.oldPrice}</div>
+            <div className="font-display text-[28px] font-semibold text-amber">{combo.total.price}</div>
+            <div className="text-[12.5px] font-semibold text-teal">{combo.total.save} · válido hasta el {PROMO_END}</div>
+          </div>
+        </div>
+
+        <div className="mt-4 flex flex-wrap items-center justify-between gap-3 rounded-[16px] border border-dashed border-teal/50 px-6 py-4">
+          <span className="text-[15px] text-body">{combo.pagos.text}</span>
+          <span className="font-display text-[20px] font-semibold text-teal">{combo.pagos.price}</span>
+        </div>
+
+        <h3 className="mb-5 mt-14 text-[22px] font-semibold text-navy">Servicios adicionales y costos aparte</h3>
+        <div className="grid gap-5 min-[901px]:grid-cols-3">
+          {extras.map((e) => (
+            <div
+              key={e.name}
+              className={`card-grad relative rounded-[18px] px-5 py-5 ${e.optional ? '!border-amber/40' : ''} shadow-[var(--shadow-soft),inset_0_1px_0_rgba(255,255,255,0.04)]`}
+            >
+              {e.optional && (
+                <span className="absolute -top-[12px] right-4 rounded-[20px] bg-amber px-3 py-1 text-xs font-semibold text-[#2B1400]">Opcional</span>
+              )}
+              <div className="mb-1.5 text-base font-semibold text-navy">{e.name}</div>
+              <div className="mb-2 font-display text-[18px] font-semibold text-amber">{e.price}</div>
+              <p className="text-[14px] leading-relaxed text-muted">{e.text}</p>
+            </div>
+          ))}
+        </div>
         <p className="mt-7 max-w-[760px] text-[14.5px] leading-relaxed text-muted">
-          Los tiempos asumen que ya tienes una cuenta de WhatsApp Business API activa. Si hay que crearla desde cero, suma entre 1 y 2 semanas.
+          Los precios de Meta pueden variar. Te explicamos todos los costos antes de empezar, para que sepas exactamente qué pagas a Praxia Labs y qué pagas a cada proveedor.
         </p>
+        <div className="mt-6">
+          <a href={waLink('Hola, quiero armar mi plan de WhatsApp con IA en Praxia Labs.')} target="_blank" rel="noopener noreferrer" className="btn btn-amber">
+            Quiero armar mi plan de WhatsApp
+          </a>
+        </div>
       </div>
     </section>
   )

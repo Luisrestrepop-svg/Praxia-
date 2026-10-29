@@ -1,16 +1,36 @@
-import { services } from '../data'
+import { services, PROMO_END, waLink } from '../data'
 
-function Dots({ level }) {
+function PlanCard({ p, service }) {
   return (
-    <div className="ml-auto flex shrink-0 gap-1">
-      {[1, 2, 3].map((n) => (
+    <div
+      className={`card-grad hover-lift relative flex flex-col rounded-[18px] px-5 py-5 hover:-translate-y-0.5 ${
+        p.promo ? '!border-amber/50 shadow-[var(--shadow-medium),var(--shadow-glow-amber),inset_0_1px_0_rgba(255,255,255,0.06)]' : 'shadow-[var(--shadow-soft),inset_0_1px_0_rgba(255,255,255,0.04)]'
+      }`}
+    >
+      {p.promo && (
         <span
-          key={n}
-          className={`h-[7px] w-[7px] rounded-full ${
-            n <= level ? 'bg-amber shadow-[0_0_6px_rgba(255,180,84,0.6)]' : 'bg-white/[0.14]'
-          }`}
-        />
-      ))}
+          className="absolute -top-[12px] right-4 rounded-[20px] px-3 py-1 text-xs font-semibold text-[#2B1400] shadow-soft"
+          style={{ background: 'linear-gradient(160deg,#FFC170,#E8952E)' }}
+        >
+          {p.promo}
+        </span>
+      )}
+      <div className="mb-2 text-base font-semibold text-navy">{p.name}</div>
+      <p className="mb-4 text-[14px] leading-relaxed text-muted">{p.desc}</p>
+      <div className="mt-auto">
+        {p.oldPrice && <div className="text-[13px] text-muted line-through">{p.oldPrice}</div>}
+        <div className="font-display text-[20px] font-semibold text-amber">{p.price}</div>
+        <div className="mt-0.5 text-[12.5px] font-medium text-muted">{p.priceNote}</div>
+        {p.oldPrice && <div className="mt-1 text-[12.5px] font-semibold text-teal">Descuento válido hasta el {PROMO_END}</div>}
+        <a
+          href={waLink(`Hola, quiero información sobre "${p.name}" (${service}) de Praxia Labs.`)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 inline-flex items-center gap-1.5 text-[14px] font-semibold text-teal transition-colors hover:text-white"
+        >
+          Cotizar por WhatsApp <span aria-hidden="true">→</span>
+        </a>
+      </div>
     </div>
   )
 }
@@ -19,41 +39,32 @@ export default function Servicios() {
   return (
     <section className="section" id="servicios">
       <div className="wrap">
-        <div className="mb-9 max-w-[640px]">
+        <div className="mb-10 max-w-[680px]">
           <h2 className="mb-3.5 text-[32px]">Nuestros servicios</h2>
           <p className="text-[17px] text-muted">
-            Organizados de lo más simple a lo más avanzado, para que empieces por donde tu negocio lo necesite.
+            Cuatro servicios para que atiendas, vendas y crezcas. Empieza por el que tu negocio necesite hoy y suma los demás cuando quieras.
           </p>
-          <div className="mt-5 flex flex-wrap items-center gap-2 text-[13px] text-muted">
-            Complejidad e inversión:
-            <Dots level={1} /> básica
-            <Dots level={2} /> media
-            <Dots level={3} /> avanzada
-          </div>
         </div>
 
-        {services.map((cat) => (
-          <div key={cat.letter} className="mb-8">
-            <div className="mb-3.5 flex items-baseline gap-3 border-b border-white/10 pb-2.5">
-              <span className="font-display text-xl font-bold text-blue">{cat.letter}</span>
-              <h3 className="text-base font-semibold text-navy">{cat.title}</h3>
+        {services.map((s) => (
+          <div key={s.id} id={`servicio-${s.id}`} className="mb-12">
+            <div className="mb-5 flex items-start gap-4 border-b border-white/10 pb-4">
+              <span className="font-display text-[34px] font-bold leading-none text-blue">{s.number}</span>
+              <div>
+                <h3 className="text-[22px] font-semibold text-navy">{s.title}</h3>
+                <p className="mt-1.5 max-w-[640px] text-[15px] text-muted">{s.summary}</p>
+              </div>
             </div>
-            <ul className="grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-2.5">
-              {cat.items.map((s) => (
-                <li
-                  key={s.name}
-                  className="card-grad hover-lift flex items-center gap-3 rounded-xl px-3.5 py-2.5 shadow-[var(--shadow-soft),inset_0_1px_0_rgba(255,255,255,0.04)] hover:-translate-y-0.5"
-                >
-                  <div className="icon-grad flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-[#7FC4FF]">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d={s.icon} /></svg>
-                  </div>
-                  <div className="flex-1 text-sm font-semibold text-navy">{s.name}</div>
-                  <Dots level={s.level} />
-                </li>
+            <div className={`grid gap-5 ${s.plans.length === 4 ? 'min-[801px]:grid-cols-2 min-[1081px]:grid-cols-4' : 'min-[801px]:grid-cols-3'}`}>
+              {s.plans.map((p) => (
+                <PlanCard key={p.name} p={p} service={s.title} />
               ))}
-            </ul>
+            </div>
           </div>
         ))}
+        <p className="max-w-[760px] text-[14px] leading-relaxed text-muted">
+          Precios en pesos colombianos. “Desde” significa que el valor final depende de las especificaciones de tu negocio; siempre te cotizamos por escrito antes de empezar.
+        </p>
       </div>
     </section>
   )

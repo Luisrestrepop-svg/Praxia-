@@ -1,4 +1,4 @@
-import { services, tiers, plans, faqs, EMAIL, INSTAGRAM_URL, TIKTOK_URL } from './data'
+import { services, plans, faqs, EMAIL, INSTAGRAM_URL, TIKTOK_URL } from './data'
 
 export const SITE_URL = 'https://www.praxialabs.store'
 export const SITE_NAME = 'Praxia Labs'
@@ -27,10 +27,10 @@ export function buildJsonLd() {
     logo: { '@type': 'ImageObject', url: LOGO, width: 825, height: 299 },
     image: OG_IMAGE,
     description:
-      'Automatización de WhatsApp con IA, posicionamiento en Google (SEO local), páginas web y gestión de redes sociales para negocios de Medellín.',
-    slogan: 'Automatización sin barreras',
+      'WhatsApp Business con agenda y pagos, páginas web y catálogos, análisis de datos, y redes sociales y publicidad para negocios de Medellín.',
+    slogan: 'Conecta tu negocio',
     email: EMAIL,
-    telephone: '+573217908685',
+    telephone: '+573217908586',
     priceRange: '$$',
     currenciesAccepted: 'COP',
     address: { '@type': 'PostalAddress', addressLocality: 'Medellín', addressRegion: 'Antioquia', addressCountry: 'CO' },
@@ -40,22 +40,22 @@ export function buildJsonLd() {
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer service',
-      telephone: '+573217908685',
+      telephone: '+573217908586',
       email: EMAIL,
       availableLanguage: 'es',
       areaServed: 'CO',
     },
     makesOffer: [
-      ...tiers.map((t) => offer(t.name, t.price, t.audience)),
+      ...services.flatMap((s) => s.plans.map((p) => offer(`${s.title}: ${p.name}`, String(p.priceValue), p.desc))),
       ...plans.map((p) => offer(`Paquete ${p.name}`, p.price, p.feats.join('. '))),
     ],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Servicios de Praxia Labs',
-      itemListElement: services.map((cat) => ({
+      itemListElement: services.map((s) => ({
         '@type': 'OfferCatalog',
-        name: cat.title,
-        itemListElement: cat.items.map((s) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: s.name } })),
+        name: s.title,
+        itemListElement: s.plans.map((p) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: p.name } })),
       })),
     },
   }
@@ -73,7 +73,7 @@ export function buildJsonLd() {
     '@type': 'WebPage',
     '@id': `${SITE_URL}/#webpage`,
     url: `${SITE_URL}/`,
-    name: 'Praxia Labs — Automatización de WhatsApp, SEO local y páginas web en Medellín',
+    name: 'Praxia Labs — WhatsApp con IA, páginas web, datos y publicidad en Medellín',
     isPartOf: { '@id': SITE_ID },
     about: { '@id': ORG_ID },
     primaryImageOfPage: { '@type': 'ImageObject', url: OG_IMAGE },
