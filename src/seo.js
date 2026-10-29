@@ -30,7 +30,7 @@ export function buildJsonLd() {
       'WhatsApp Business con agenda y pagos, páginas web y catálogos, análisis de datos, y redes sociales y publicidad para negocios de Medellín.',
     slogan: 'Conecta tu negocio',
     email: EMAIL,
-    telephone: '+573217908586',
+    telephone: '+573217908685',
     priceRange: '$$',
     currenciesAccepted: 'COP',
     address: { '@type': 'PostalAddress', addressLocality: 'Medellín', addressRegion: 'Antioquia', addressCountry: 'CO' },
@@ -40,7 +40,7 @@ export function buildJsonLd() {
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer service',
-      telephone: '+573217908586',
+      telephone: '+573217908685',
       email: EMAIL,
       availableLanguage: 'es',
       areaServed: 'CO',
