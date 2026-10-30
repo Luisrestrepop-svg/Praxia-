@@ -10,8 +10,8 @@ const messages = [
   { side: 'in', text: 'A las 4' },
   { side: 'out', kind: 'cita', title: 'Cita confirmada', detail: 'Mañana · 4:00 p. m.', text: 'Te enviaré un recordatorio.' },
   { side: 'in', text: '¿La puedo pagar ya para que me la separen?' },
-  { side: 'out', text: '¡Claro! Aquí está tu enlace de pago seguro 👇' },
-  { side: 'out', kind: 'pago', title: 'Pagar $120.000', detail: 'Enlace de pago seguro' },
+  { side: 'out', text: '¡Claro! Aquí tienes el enlace de pago 👇' },
+  { side: 'out', kind: 'pago', title: 'tutienda.co/pagar', detail: 'Abre la pasarela de pagos' },
   { side: 'in', text: 'Listo, ya pagué 😊' },
   { side: 'out', text: '¡Recibido! Tu chaqueta queda separada. Te esperamos mañana a las 4:00 p. m. 🙌' },
 ]
@@ -41,7 +41,7 @@ function Bubble({ m }) {
     return (
       <div className={`${base} ${side}`}>
         <div className="flex items-center gap-2 rounded-lg bg-white px-3 py-2 text-[#0F6E60]">
-          <span aria-hidden="true" className="text-base">💳</span>
+          <span aria-hidden="true" className="text-base">🔗</span>
           <div>
             <div className="text-[13px] font-semibold">{m.title}</div>
             <div className="text-[11.5px] opacity-80">{m.detail}</div>
@@ -124,7 +124,7 @@ export default function Hero() {
           <h1 className="mb-5 text-[34px] tracking-[-0.5px] sm:text-5xl">Actualiza tu negocio y no pierdas más clientes</h1>
           <p className="-mt-2.5 mb-5 text-[17px] font-semibold text-amber">Automatización sin barreras</p>
           <p className="mb-8 max-w-[480px] text-lg text-muted">
-            Conectamos tu WhatsApp con tu agenda y tus pagos, creamos tu página web, medimos lo que funciona y te traemos más clientes — explicándote cada paso, sin tecnicismos.
+            Ponemos un chatbot en tu WhatsApp, creamos tu página web, medimos lo que funciona y te traemos más clientes — explicándote cada paso, sin tecnicismos.
           </p>
           <div className="flex flex-wrap gap-3.5">
             <a href={waLink()} target="_blank" rel="noopener noreferrer" className="btn btn-amber">Habla con nosotros por WhatsApp</a>
@@ -135,14 +135,14 @@ export default function Hero() {
         <div ref={phoneRef} className="mx-auto">
           <div
             role="img"
-            aria-label="Ejemplo de conversación de WhatsApp con un agente de IA que responde, agenda una cita y recibe el pago"
+            aria-label="Ejemplo de conversación de WhatsApp con un chatbot que responde, agenda una cita y envía el enlace de pago"
             className="mx-auto w-[290px] rounded-[32px] border border-white/10 p-3.5 shadow-deep"
             style={{ background: 'linear-gradient(165deg,#2A303A,#181B20)' }}
           >
             <div className="flex h-[540px] flex-col overflow-hidden rounded-[20px] bg-[#EAF6F3]">
               <div className="flex items-center gap-2.5 bg-[#0F9E8B] px-4 py-3.5 text-sm font-semibold text-white">
                 <span className="h-2 w-2 rounded-full bg-white opacity-70" /> Tienda Doña Marta
-                <span className="ml-auto text-[11px] font-medium opacity-80">agente de IA</span>
+                <span className="ml-auto text-[11px] font-medium opacity-80">chatbot</span>
               </div>
               <div className="chat flex flex-1 flex-col justify-end gap-2.5 overflow-hidden p-4">
                 {messages.slice(0, shown).map((m, i) => (
@@ -164,7 +164,7 @@ export default function Hero() {
               </div>
             </div>
           </div>
-          <p className="mt-3 text-center text-[12.5px] text-muted">Ejemplo ilustrativo: el agente atiende, agenda y cobra.</p>
+          <p className="mt-3 text-center text-[12.5px] text-muted">Ejemplo ilustrativo: el chatbot atiende, agenda y envía el enlace de pago.</p>
         </div>
       </div>
     </section>

@@ -1,20 +1,19 @@
 # Praxia Labs
 
-> Praxia Labs es un equipo de Medellín, Colombia, que ayuda a tiendas, restaurantes y negocios de barrio a atender, vender y crecer en lo digital: WhatsApp Business con agenda y pagos, páginas web y catálogos, análisis de datos, y redes sociales y publicidad. Acompañamiento cercano y sin tecnicismos, también para dueños que nunca han usado estas herramientas.
+> Praxia Labs es un equipo de Medellín, Colombia, que ayuda a tiendas, restaurantes y negocios de barrio a atender, vender y crecer en lo digital: chatbots de WhatsApp, páginas web y catálogos, análisis de datos, y redes sociales y publicidad. Acompañamiento cercano y sin tecnicismos, también para dueños que nunca han usado estas herramientas.
 
 Sitio web: https://www.praxialabs.store/
 Contacto: WhatsApp +57 321 790 8685 · praxialabsm@gmail.com
 Redes: https://www.instagram.com/praxialabs · https://www.tiktok.com/@praxialabs
 Idioma: español (Colombia). Moneda: pesos colombianos (COP).
 
-## 1. WhatsApp Business con agenda y pagos
+## 1. Chatbots de WhatsApp
 
-Los niveles se suman:
-- Esencial: $500.000 COP, precio base. WhatsApp Business bien configurado y agente de IA entrenado con la información del negocio.
-- Agenda: se suma al Esencial por $1.500.000 COP (total $2.000.000). Citas con confirmación y recordatorios automáticos. Esencial + Agenda con 15% de descuento: $1.700.000 COP, válido hasta el 15 de noviembre de 2026.
-- Pagos: se suma por $500.000 COP (total desde $2.500.000 sin descuento). Enlace de pago por una pasarela y registro de cada venta.
-- Acompañamiento mensual opcional: $250.000 COP al mes.
-- Costos de terceros que paga el cliente directo: la suscripción de Meta al agente de IA de WhatsApp Business (desde unos $35.990 COP al mes, la primera semana es gratis; el precio puede variar) y la comisión de la pasarela de pagos.
+- Chatbot con respuestas fijas: $1.000.000 COP, pago único, listo en 1 a 2 semanas. Menú de opciones, respuestas predefinidas y flujos básicos.
+- Chatbot con IA conversacional: $1.500.000 COP, pago único, listo en 2 a 4 semanas. Responde preguntas abiertas, entiende el contexto e integra WhatsApp Business.
+- Agente autónomo con integraciones: desde $2.000.000 COP según la complejidad, listo en 6 a 12 semanas. Califica leads, actualiza el CRM y agenda citas.
+- Si hay que crear la cuenta de WhatsApp Business API desde cero, suma entre 1 y 2 semanas.
+- No incluyen servicios de terceros (WhatsApp, la IA elegida y el almacenamiento de datos), que se pagan aparte directamente al proveedor.
 
 ## 2. Página web y catálogos
 

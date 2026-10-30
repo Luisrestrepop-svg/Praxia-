@@ -5,13 +5,13 @@ export const services = [
   {
     id: 'whatsapp',
     number: '1',
-    title: 'WhatsApp Business con agenda y pagos',
-    summary: 'Un agente de IA entrenado con tu negocio, conectado a tu agenda y a tus cobros. Armas tu plan por niveles: cada nivel se suma al anterior.',
+    title: 'Chatbots de WhatsApp',
+    summary: 'Un chatbot en tu WhatsApp que atiende a tus clientes a toda hora. Elige el nivel según qué tan compleja necesites la conversación.',
     icon: 'M21 11.5a8.4 8.4 0 01-8.4 8.4 8.3 8.3 0 01-3.9-1L3 20l1.2-5.6a8.3 8.3 0 01-1-3.9A8.4 8.4 0 0111.6 2a8.4 8.4 0 019.4 8.4z',
     plans: [
-      { name: 'Esencial', desc: 'WhatsApp Business bien configurado y agente de IA entrenado con la información de tu negocio.', price: '$500.000 COP', priceNote: 'Precio base · pago único', priceValue: 500000 },
-      { name: '+ Agenda', desc: 'Citas con confirmación y recordatorios automáticos, conectadas a tu calendario.', price: '+ $1.500.000 COP', priceNote: 'Se suma al Esencial · total $2.000.000', priceValue: 1500000 },
-      { name: '+ Pagos', desc: 'Enlace de pago por la pasarela que elijas y registro de cada venta.', price: '+ $500.000 COP', priceNote: 'Se suma a Esencial + Agenda · total desde $2.500.000', priceValue: 500000 },
+      { name: 'Chatbot con respuestas fijas', desc: 'Menú de opciones, respuestas predefinidas y flujos básicos. Ideal si tus clientes preguntan siempre lo mismo: horarios, precios y ubicación.', price: '$1.000.000 COP', priceNote: 'Pago único', priceValue: 1000000 },
+      { name: 'Chatbot con IA conversacional', desc: 'Responde preguntas abiertas y entiende el contexto, con inteligencia artificial integrada a WhatsApp Business.', price: '$1.500.000 COP', priceNote: 'Pago único', priceValue: 1500000 },
+      { name: 'Agente autónomo con integraciones', desc: 'Califica leads, actualiza tu CRM y agenda citas, conectado a tus sistemas.', price: 'Desde $2.000.000 COP', priceNote: 'Según especificaciones técnicas', priceValue: 2000000 },
     ],
   },
   {
@@ -46,26 +46,11 @@ export const services = [
     icon: 'M3 11l18-8v18L3 13zM7 14v6',
     plans: [
       { name: 'Impulso visual', desc: '4 piezas publicitarias por el precio de 3, con fotos de producto mejoradas con IA, listas para WhatsApp y redes.', price: '$220.000 COP', priceNote: 'Paga 3, lleva 4', promo: 'Promo', priceValue: 220000 },
-      { name: 'Anuncios que abren WhatsApp', desc: 'Creamos y gestionamos campañas en Facebook e Instagram, con el agente atendiendo los mensajes. La inversión en anuncios la pagas tú directo a Meta.', price: '$600.000 COP', priceNote: 'Al mes + inversión en anuncios', priceValue: 600000 },
+      { name: 'Anuncios que abren WhatsApp', desc: 'Creamos y gestionamos campañas en Facebook e Instagram, con el chatbot atendiendo los mensajes. La inversión en anuncios la pagas tú directo a Meta.', price: '$600.000 COP', priceNote: 'Al mes + inversión en anuncios', priceValue: 600000 },
       { name: 'Contenido y redes', desc: 'Gestión mensual de tus redes sociales con contenido creado con IA.', price: 'Desde $600.000 COP', priceNote: 'Al mes', priceValue: 600000 },
       { name: 'Todo en uno', desc: 'Anuncios, contenido e informe mensual en un solo plan.', price: 'Desde $1.200.000 COP', priceNote: 'Al mes', priceValue: 1200000 },
     ],
   },
-]
-
-// Esencial + Agenda con descuento
-export const combo = {
-  base: { name: 'Esencial', price: '$500.000 COP', text: 'Atiende: tu agente de IA responde las preguntas de tus clientes, a toda hora.' },
-  add: { name: 'Agenda', price: '+ $1.500.000 COP', text: 'Reserva: el cliente elige su horario y recibe confirmación y recordatorio automático.' },
-  total: { name: 'Juntos', oldPrice: '$2.000.000 COP', price: '$1.700.000 COP', save: 'Ahorras $300.000', text: 'Del primer mensaje a la cita confirmada, sin que coordines nada a mano.' },
-  pagos: { name: 'Pagos', price: '+ $500.000 COP', text: '¿Quieres cobrar por WhatsApp? Suma Pagos.' },
-}
-
-// Servicios adicionales y costos que se pagan aparte
-export const extras = [
-  { name: 'Acompañamiento mensual', price: '$250.000 COP al mes', text: 'Opcional: revisión de conversaciones, ajustes de respuestas y soporte.', optional: true, priceValue: 250000 },
-  { name: 'Suscripción de Meta', price: 'Desde $35.990 COP al mes', text: 'El agente de IA de WhatsApp Business lo ofrece Meta por suscripción mensual (la primera semana es gratis). Se paga directo a Meta; el precio puede variar e incluir impuestos.' },
-  { name: 'Pasarela de pagos', price: 'Comisión por cobro', text: 'Si conectas pagos, la pasarela que elijas cobra su comisión por cada transacción.' },
 ]
 
 export const whyItems = [
@@ -101,6 +86,41 @@ export const benefits = [
   },
 ]
 
+export const tiers = [
+  {
+    name: 'Chatbot con respuestas fijas (reglas)',
+    price: '$1.000.000 COP',
+    priceNote: 'Pago único',
+    time: '1–2 semanas',
+    includes: 'Diseño de flujos, configuración, pruebas y capacitación.',
+    label: 'Funcionalidades',
+    feats: ['Menú de opciones', 'Respuestas predefinidas', 'Flujos básicos'],
+    audience: 'Ideal si tus clientes suelen preguntar lo mismo: horarios, precios y ubicación.',
+  },
+  {
+    name: 'Chatbot con IA conversacional',
+    price: '$1.500.000 COP',
+    note: 'El valor no incluye los servicios de terceros que hacen funcionar el chatbot: WhatsApp, la inteligencia artificial que elijas y el almacenamiento de tus datos. Estos se pagan aparte, directamente al proveedor.',
+    label: 'Funcionalidades',
+    recommended: true,
+    time: '2–4 semanas',
+    includes: 'Desarrollo y entrenamiento, integración con WhatsApp Business API y pruebas extensas.',
+    feats: ['Responde preguntas abiertas', 'Entiende el contexto', 'Integración con WhatsApp Business'],
+    audience: 'Ideal si tus clientes hacen preguntas muy distintas y necesitas respuestas naturales, como las de una persona.',
+  },
+  {
+    name: 'Agente autónomo con integraciones',
+    price: '$2.000.000 COP',
+    priceNote: 'Desde · según especificaciones técnicas',
+    time: '6–12 semanas',
+    includes: 'Arquitectura completa, integraciones con sistemas externos, testing y documentación.',
+    note: 'Es un precio de referencia, ya que el valor final se define según la complejidad técnica de tu proyecto, como las integraciones con tus sistemas y las reglas de negocio a la medida. No incluye los servicios de terceros (WhatsApp, la inteligencia artificial que elijas y el almacenamiento de datos), que se pagan aparte.',
+    label: 'Funcionalidades',
+    feats: ['Califica leads', 'Actualiza CRM', 'Agenda citas', 'Razona de forma autónoma'],
+    audience: 'Ideal para empresas con procesos de ventas o soporte más complejos, que necesitan conectar varios sistemas.',
+  },
+]
+
 export const plans = [
   {
     name: 'Arranque',
@@ -129,7 +149,7 @@ export const plans = [
 
 export const navLinks = [
   { href: '#servicios', label: 'Servicios' },
-  { href: '#whatsapp', label: 'WhatsApp con IA' },
+  { href: '#whatsapp', label: 'Chatbots' },
   { href: '#paquetes', label: 'Paquetes' },
   { href: '#nosotros', label: 'Nosotros' },
 ]
@@ -144,15 +164,15 @@ export const waLink = (msg = 'Hola quiero más información de Praxia Labs y sus
 export const faqs = [
   {
     q: '¿Qué hace Praxia Labs?',
-    a: 'Praxia Labs es un equipo de Medellín que ayuda a tiendas, restaurantes y negocios de barrio a atender, vender y crecer en lo digital. Tenemos cuatro servicios: WhatsApp Business con agenda y pagos, página web y catálogos, análisis de datos, y redes sociales y publicidad.',
+    a: 'Praxia Labs es un equipo de Medellín que ayuda a tiendas, restaurantes y negocios de barrio a atender, vender y crecer en lo digital. Tenemos cuatro servicios: chatbots de WhatsApp, página web y catálogos, análisis de datos, y redes sociales y publicidad.',
   },
   {
-    q: '¿Cuánto cuesta automatizar mi WhatsApp?',
-    a: 'Se arma por niveles que se suman. El Esencial cuesta $500.000 COP (WhatsApp bien configurado y agente de IA entrenado con tu negocio). La Agenda se suma por $1.500.000 COP y deja las citas confirmadas con recordatorios automáticos: juntos son $2.000.000 COP, y hasta el 15 de noviembre de 2026 tienen 15% de descuento ($1.700.000 COP). Si además quieres cobrar por WhatsApp, el servicio de Pagos se suma por $500.000 COP.',
+    q: '¿Cuánto cuesta un chatbot de WhatsApp para mi negocio?',
+    a: 'Tenemos tres niveles. El chatbot con respuestas fijas cuesta $1.000.000 COP (pago único), el chatbot con IA conversacional cuesta $1.500.000 COP y el agente autónomo con integraciones parte desde $2.000.000 COP según la complejidad de tu proyecto. Los servicios de terceros, como WhatsApp o la IA que elijas, se pagan aparte directamente al proveedor.',
   },
   {
-    q: '¿Qué es el agente de IA de Meta y qué cobra Meta?',
-    a: 'WhatsApp Business ofrece un agente de IA propio de Meta, que responde a tus clientes a toda hora. Meta lo cobra por suscripción mensual (la primera semana es gratis, y en Colombia los planes parten desde unos $35.990 COP al mes; el precio puede variar). Se paga directo a Meta. Nosotros lo configuramos, lo entrenamos con la información de tu negocio y lo conectamos con tu agenda y tus pagos, que es lo que Meta no hace por ti.',
+    q: '¿Cuánto tarda en estar listo mi chatbot?',
+    a: 'El chatbot con respuestas fijas queda listo en 1 a 2 semanas, el chatbot con IA conversacional en 2 a 4 semanas y el agente autónomo en 6 a 12 semanas. Si hay que crear la cuenta de WhatsApp Business API desde cero, suma entre 1 y 2 semanas.',
   },
   {
     q: '¿Cuánto cuesta una página web?',
@@ -167,9 +187,10 @@ export const faqs = [
     a: '“Arranque” cuesta desde $1.500.000 COP: WhatsApp Esencial y página web básica. “Crecimiento” cuesta $2.900.000 COP: Esencial + Agenda, página web básica e Impulso visual. “Todo en uno” cuesta $5.600.000 COP: Esencial + Agenda + Pagos, web con tienda y tablero de resultados. Los precios de Crecimiento y Todo en uno incluyen servicios con descuento y son válidos hasta el 15 de noviembre de 2026.',
   },
   {
-    q: '¿Los precios incluyen dominio, hosting, Meta o la pasarela de pagos?',
-    a: 'No. Los precios no incluyen servicios de terceros: la suscripción de Meta al agente de IA, el dominio y el hosting de tu web, la comisión de la pasarela de pagos ni la inversión en anuncios. Estos se pagan aparte, directamente al proveedor, y te los explicamos antes de empezar.',
+    q: '¿Los precios incluyen dominio, hosting o WhatsApp?',
+    a: 'No. Los precios no incluyen servicios de terceros como WhatsApp, la inteligencia artificial que elijas, el almacenamiento de datos, el dominio o el hosting de tu web, ni la inversión en anuncios. Estos se pagan aparte, directamente al proveedor, y te los explicamos antes de empezar.',
   },
+
   {
     q: '¿Qué es el análisis de datos y para qué me sirve?',
     a: 'Es saber qué funciona en tu negocio. Juntamos tus conversaciones de WhatsApp, citas, pagos y anuncios en un solo tablero para que veas cuántos clientes llegan, cuántos compran y cuánto te cuesta cada uno. Puedes empezar con un diagnóstico de $400.000 COP.',

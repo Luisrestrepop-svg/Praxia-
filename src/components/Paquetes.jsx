@@ -61,7 +61,7 @@ export default function Paquetes() {
           ))}
         </div>
         <p className="mt-8 max-w-[760px] text-[14px] leading-relaxed text-[#9AA6B8]">
-          Los precios de Crecimiento y Todo en uno incluyen servicios con descuento y son válidos hasta el {PROMO_END}. No incluyen servicios de terceros: la suscripción de Meta, el dominio, el hosting, la comisión de la pasarela de pagos ni la inversión en anuncios. El mantenimiento de la web y el acompañamiento mensual son opcionales y se cotizan aparte.
+          Los precios de Crecimiento y Todo en uno incluyen servicios con descuento y son válidos hasta el {PROMO_END}. No incluyen servicios de terceros como WhatsApp, la inteligencia artificial que elijas, el almacenamiento de datos, el dominio, el hosting ni la inversión en anuncios. El mantenimiento de la web y el acompañamiento mensual son opcionales y se cotizan aparte.
         </p>
       </div>
     </section>
