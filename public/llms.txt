@@ -42,7 +42,7 @@ Idioma: español (Colombia). Moneda: pesos colombianos (COP).
 - Crecimiento: $2.900.000 COP. Esencial + Agenda (con 15% de descuento), página web básica e Impulso visual.
 - Todo en uno: $5.600.000 COP. Esencial + Agenda + Pagos, web con tienda (con 20% de descuento) y tablero de resultados.
 - Los precios de Crecimiento y Todo en uno incluyen servicios con descuento y son válidos hasta el 15 de noviembre de 2026.
-- No incluyen servicios de terceros: suscripción de Meta, dominio, hosting, comisión de la pasarela ni inversión en anuncios.
+- No incluyen servicios de terceros: WhatsApp, IA elegida, almacenamiento de datos, dominio, hosting ni inversión en anuncios.
 
 ## Más información
 
