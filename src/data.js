@@ -125,25 +125,25 @@ export const plans = [
   {
     name: 'Arranque',
     tag: 'Para empezar con lo básico',
-    price: 'Desde $1.500.000 COP',
-    save: 'Ahorras $200.000',
-    feats: ['WhatsApp Esencial (agente de IA entrenado)', 'Página web básica', 'Ficha de Google Business Profile'],
+    price: 'Desde $1.950.000 COP',
+    save: 'Ahorras $250.000',
+    feats: ['Chatbot con respuestas fijas', 'Página web básica', 'Ficha de Google Business Profile'],
   },
   {
     name: 'Crecimiento',
-    tag: 'WhatsApp con agenda y web',
-    price: '$2.900.000 COP',
-    save: 'Ahorras $220.000',
+    tag: 'Chatbot con IA y página web',
+    price: '$2.650.000 COP',
+    save: 'Ahorras $270.000',
     badge: 'Más elegido',
     featured: true,
-    feats: ['WhatsApp Esencial + Agenda (con 15% de descuento)', 'Página web básica', 'Impulso visual: 4 piezas por el precio de 3'],
+    feats: ['Chatbot con IA conversacional', 'Página web básica', 'Impulso visual: 4 piezas por el precio de 3'],
   },
   {
     name: 'Todo en uno',
-    tag: 'Atiende, cobra, vende y mide',
-    price: '$5.600.000 COP',
+    tag: 'Atiende, vende y mide',
+    price: 'Desde $5.400.000 COP',
     save: 'Ahorras $600.000',
-    feats: ['WhatsApp Esencial + Agenda + Pagos', 'Web con tienda (con 20% de descuento)', 'Tablero de resultados'],
+    feats: ['Agente autónomo con integraciones', 'Web con tienda (con 20% de descuento)', 'Tablero de resultados'],
   },
 ]
 
@@ -184,8 +184,9 @@ export const faqs = [
   },
   {
     q: '¿Qué incluyen los paquetes y cuánto cuestan?',
-    a: '“Arranque” cuesta desde $1.500.000 COP: WhatsApp Esencial y página web básica. “Crecimiento” cuesta $2.900.000 COP: Esencial + Agenda, página web básica e Impulso visual. “Todo en uno” cuesta $5.600.000 COP: Esencial + Agenda + Pagos, web con tienda y tablero de resultados. Los precios de Crecimiento y Todo en uno incluyen servicios con descuento y son válidos hasta el 15 de noviembre de 2026.',
+    a: '“Arranque” cuesta desde $1.950.000 COP: chatbot con respuestas fijas y página web básica. “Crecimiento” cuesta $2.650.000 COP: chatbot con IA conversacional, página web básica e Impulso visual. “Todo en uno” cuesta desde $5.400.000 COP: agente autónomo con integraciones, web con tienda y tablero de resultados. El precio de Todo en uno incluye la web con tienda con 20% de descuento, válido hasta el 15 de noviembre de 2026. Los precios con “desde” dependen de las especificaciones de tu negocio.',
   },
+
   {
     q: '¿Los precios incluyen dominio, hosting o WhatsApp?',
     a: 'No. Los precios no incluyen servicios de terceros como WhatsApp, la inteligencia artificial que elijas, el almacenamiento de datos, el dominio o el hosting de tu web, ni la inversión en anuncios. Estos se pagan aparte, directamente al proveedor, y te los explicamos antes de empezar.',

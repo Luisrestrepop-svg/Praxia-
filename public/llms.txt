@@ -38,10 +38,10 @@ Idioma: español (Colombia). Moneda: pesos colombianos (COP).
 
 ## Paquetes
 
-- Arranque: desde $1.500.000 COP. WhatsApp Esencial y página web básica.
-- Crecimiento: $2.900.000 COP. Esencial + Agenda (con 15% de descuento), página web básica e Impulso visual.
-- Todo en uno: $5.600.000 COP. Esencial + Agenda + Pagos, web con tienda (con 20% de descuento) y tablero de resultados.
-- Los precios de Crecimiento y Todo en uno incluyen servicios con descuento y son válidos hasta el 15 de noviembre de 2026.
+- Arranque: desde $1.950.000 COP. Chatbot con respuestas fijas y página web básica.
+- Crecimiento: $2.650.000 COP. Chatbot con IA conversacional, página web básica e Impulso visual.
+- Todo en uno: desde $5.400.000 COP. Agente autónomo con integraciones, web con tienda (con 20% de descuento) y tablero de resultados.
+- El precio de Todo en uno incluye la web con tienda con 20% de descuento, válido hasta el 15 de noviembre de 2026.
 - No incluyen servicios de terceros: WhatsApp, IA elegida, almacenamiento de datos, dominio, hosting ni inversión en anuncios.
 
 ## Más información
