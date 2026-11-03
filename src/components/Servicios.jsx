@@ -55,11 +55,27 @@ export default function Servicios() {
                 <p className="mt-1.5 max-w-[640px] text-[15px] text-muted">{s.summary}</p>
               </div>
             </div>
-            <div className={`grid gap-5 ${s.plans.length === 4 ? 'min-[801px]:grid-cols-2 min-[1081px]:grid-cols-4' : 'min-[801px]:grid-cols-3'}`}>
-              {s.plans.map((p) => (
-                <PlanCard key={p.name} p={p} service={s.title} />
-              ))}
-            </div>
+            {s.plans.some((p) => p.group) ? (
+              [...new Set(s.plans.map((p) => p.group))].map((g) => {
+                const items = s.plans.filter((p) => p.group === g)
+                return (
+                  <div key={g} className="mb-6">
+                    <div className="mb-3 text-[13px] font-semibold uppercase tracking-[0.12em] text-teal">{g}</div>
+                    <div className={`grid gap-5 ${items.length === 1 ? 'min-[801px]:grid-cols-3' : 'min-[801px]:grid-cols-3'}`}>
+                      {items.map((p) => (
+                        <PlanCard key={p.name} p={p} service={s.title} />
+                      ))}
+                    </div>
+                  </div>
+                )
+              })
+            ) : (
+              <div className={`grid gap-5 ${s.plans.length === 4 ? 'min-[801px]:grid-cols-2 min-[1081px]:grid-cols-4' : 'min-[801px]:grid-cols-3'}`}>
+                {s.plans.map((p) => (
+                  <PlanCard key={p.name} p={p} service={s.title} />
+                ))}
+              </div>
+            )}
           </div>
         ))}
         <p className="max-w-[760px] text-[14px] leading-relaxed text-muted">

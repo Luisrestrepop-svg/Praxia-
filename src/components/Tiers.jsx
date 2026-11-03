@@ -1,4 +1,4 @@
-import { benefits, tiers, metaAgent, waLink } from '../data'
+import { benefits, tiers, metaAgent, metaBenefits, waLink } from '../data'
 
 function TierGrid({ items }) {
   return (
@@ -71,6 +71,7 @@ export function NivelesIA() {
           ))}
         </div>
 
+        <h3 className="mb-5 text-[13px] font-semibold uppercase tracking-[0.12em] text-amber">Servicio con Meta</h3>
         <div className="card-grad relative mb-8 rounded-[20px] !border-teal/50 px-6 py-[26px] shadow-[var(--shadow-medium),inset_0_1px_0_rgba(255,255,255,0.06)]">
           <span
             className="absolute -top-[13px] left-6 rounded-[20px] px-3 py-[5px] text-xs font-semibold text-[#0C2622] shadow-soft"
@@ -101,6 +102,28 @@ export function NivelesIA() {
           </div>
         </div>
 
+        <div className="mb-12">
+          <h3 className="mb-4 text-[22px] font-semibold text-navy">Lo que incluye la suscripción de Meta</h3>
+          <div className="grid gap-5 min-[901px]:grid-cols-3">
+            {metaBenefits.groups.map((g) => (
+              <div key={g.title} className="card-grad rounded-[18px] px-5 py-5 shadow-[var(--shadow-soft),inset_0_1px_0_rgba(255,255,255,0.04)]">
+                <div className="mb-2.5 text-sm font-semibold uppercase tracking-[0.04em] text-teal">{g.title}</div>
+                <ul className="flex flex-col gap-2">
+                  {g.items.map((it) => (
+                    <li key={it} className="relative pl-[22px] text-[14.5px] before:absolute before:left-0 before:top-0 before:text-[#25D366] before:content-['✓']">{it}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <div className="mt-5 rounded-[16px] border border-[#ff9b54]/40 bg-[#ff9b54]/10 px-5 py-4">
+            <div className="mb-1 text-sm font-semibold uppercase tracking-[0.04em] text-[#ff9b54]">✕ {metaBenefits.not.title}</div>
+            <p className="text-[14.5px] leading-relaxed text-body">{metaBenefits.not.text}</p>
+          </div>
+          <p className="mt-4 text-[14px] font-medium leading-relaxed text-[#FFD9A3]">{metaBenefits.note}</p>
+        </div>
+
+        <h3 className="mb-5 text-[13px] font-semibold uppercase tracking-[0.12em] text-teal">Nuestros chatbots</h3>
         <TierGrid items={tiers} />
         <p className="mt-7 max-w-[760px] text-[14.5px] leading-relaxed text-muted">
           Los tiempos asumen que ya tienes una cuenta de WhatsApp Business API activa. Si hay que crearla desde cero, suma entre 1 y 2 semanas.

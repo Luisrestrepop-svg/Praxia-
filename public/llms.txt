@@ -16,6 +16,8 @@ Idioma: español (Colombia). Moneda: pesos colombianos (COP).
 - Si hay que crear la cuenta de WhatsApp Business API desde cero, suma entre 1 y 2 semanas.
 - No incluyen servicios de terceros (WhatsApp, la IA elegida y el almacenamiento de datos), que se pagan aparte directamente al proveedor.
 
+Lo que incluye la suscripción de Meta (se paga directo a Meta): insignia de verificación, protección contra suplantación de identidad, 1 canal verificado, Meta Business Agent (respuestas 24 horas, Meta lo habilita poco a poco), 4 dispositivos vinculados, URL web personalizada y más chats nuevos (beneficio de prueba). Algunos de estos servicios no están totalmente disponibles y otros se deben solicitar a Meta. El agente de Meta no se conecta a un calendario (solo a Google Drive); para agendar citas se usa un chatbot de Praxia Labs.
+
 ## 2. Página web y catálogos
 
 - Página web básica: desde $1.200.000 COP. Una página, hasta 4 secciones, botón de WhatsApp y ficha de Google Business Profile.

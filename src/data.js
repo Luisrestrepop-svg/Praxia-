@@ -9,10 +9,10 @@ export const services = [
     summary: 'Un chatbot en tu WhatsApp que atiende a tus clientes a toda hora. Elige el nivel según qué tan compleja necesites la conversación.',
     icon: 'M21 11.5a8.4 8.4 0 01-8.4 8.4 8.3 8.3 0 01-3.9-1L3 20l1.2-5.6a8.3 8.3 0 01-1-3.9A8.4 8.4 0 0111.6 2a8.4 8.4 0 019.4 8.4z',
     plans: [
-      { name: 'Agente de IA de Meta', desc: 'Configuramos y entrenamos el agente de IA de WhatsApp Business con la información de tu negocio. Meta lo está habilitando poco a poco; su suscripción se paga directo a Meta.', price: '$500.000 COP', priceNote: 'Configuración · pago único', promo: 'Nuevo', priceValue: 500000 },
-      { name: 'Chatbot personalizable', desc: 'Un chatbot hecho a tu medida: tú defines el menú de opciones, las respuestas y los flujos. Ideal si tus clientes preguntan siempre lo mismo: horarios, precios y ubicación.', price: '$1.000.000 COP', priceNote: 'Pago único', priceValue: 1000000 },
-      { name: 'Chatbot con IA conversacional', desc: 'Responde preguntas abiertas y entiende el contexto, con inteligencia artificial integrada a WhatsApp Business.', price: '$1.500.000 COP', priceNote: 'Pago único', priceValue: 1500000 },
-      { name: 'Agente autónomo con integraciones', desc: 'Califica leads, actualiza tu CRM y agenda citas, conectado a tus sistemas.', price: 'Desde $2.000.000 COP', priceNote: 'Según especificaciones técnicas', priceValue: 2000000 },
+      { name: 'Agente de IA de Meta', desc: 'Configuramos y entrenamos el agente de IA de WhatsApp Business con la información de tu negocio. Meta lo está habilitando poco a poco; su suscripción se paga directo a Meta.', price: '$500.000 COP', priceNote: 'Configuración · pago único', promo: 'Nuevo', group: 'Servicio con Meta', priceValue: 500000 },
+      { name: 'Chatbot personalizable', desc: 'Un chatbot hecho a tu medida: tú defines el menú de opciones, las respuestas y los flujos. Ideal si tus clientes preguntan siempre lo mismo: horarios, precios y ubicación.', price: '$1.000.000 COP', priceNote: 'Pago único', priceValue: 1000000, group: 'Nuestros chatbots' },
+      { name: 'Chatbot con IA conversacional', desc: 'Responde preguntas abiertas y entiende el contexto, con inteligencia artificial integrada a WhatsApp Business.', price: '$1.500.000 COP', priceNote: 'Pago único', priceValue: 1500000, group: 'Nuestros chatbots' },
+      { name: 'Agente autónomo con integraciones', desc: 'Califica leads, actualiza tu CRM y agenda citas, conectado a tus sistemas.', price: 'Desde $2.000.000 COP', priceNote: 'Según especificaciones técnicas', priceValue: 2000000, group: 'Nuestros chatbots' },
     ],
   },
   {
@@ -95,6 +95,17 @@ export const metaAgent = {
   text: 'Meta está habilitando poco a poco un agente de IA dentro de WhatsApp Business que responde a tus clientes. Nosotros lo configuramos y lo entrenamos con la información de tu negocio: servicios, precios, horarios y preguntas frecuentes, para que responda bien desde el primer día.',
   feats: ['Carga de la información de tu empresa y tus productos', 'Respuestas a las preguntas frecuentes de tus clientes', 'Pruebas antes de activarlo con clientes reales', 'Ajustes después de las primeras conversaciones'],
   note: 'El agente lo habilita Meta de forma gradual y todavía está empezando: puede no estar disponible aún en tu cuenta. Su suscripción se paga directo a Meta y no está incluida. Hoy no se conecta a un calendario, así que para agendar citas conectadas a tu agenda usamos un chatbot de los niveles de arriba.',
+}
+
+// Beneficios de la suscripción de Meta (pantalla de suscripción, noviembre 2026)
+export const metaBenefits = {
+  groups: [
+    { title: 'Muestra que tu perfil es auténtico', items: ['Insignia de verificación', 'Protección contra suplantación de identidad', '1 canal verificado'] },
+    { title: 'Meta Business Agent', items: ['Respuestas a tus clientes las 24 horas (Meta lo habilita poco a poco: está empezando)'] },
+    { title: 'Amplía tus operaciones', items: ['4 dispositivos vinculados', 'URL web personalizada', 'Más chats nuevos (beneficio de prueba)'] },
+  ],
+  not: { title: 'Lo que no hace hoy', text: 'Conectarse a tu calendario para agendar citas. Solo se conecta a Google Drive. Para agendar, usa un chatbot de Praxia Labs.' },
+  note: 'Nota: algunos de estos servicios no están totalmente disponibles y otros se deben solicitar a Meta. La suscripción se paga directo a Meta.',
 }
 
 export const tiers = [
@@ -183,7 +194,7 @@ export const faqs = [
   },
   {
     q: '¿Qué es el agente de IA de Meta y ustedes lo configuran?',
-    a: 'Es un agente de IA que Meta está habilitando poco a poco dentro de WhatsApp Business y que responde a tus clientes. Todavía está empezando y puede no estar disponible en tu cuenta. Nosotros lo configuramos y lo entrenamos con la información de tu negocio por $500.000 COP (pago único). Su suscripción se paga directo a Meta y no está incluida. Hoy no se conecta a un calendario; si necesitas agendar citas, usamos un chatbot de los otros niveles.',
+    a: 'Es un agente de IA que Meta está habilitando poco a poco dentro de WhatsApp Business y que responde a tus clientes. Todavía está empezando y puede no estar disponible en tu cuenta. Nosotros lo configuramos y lo entrenamos con la información de tu negocio por $500.000 COP (pago único). Su suscripción se paga directo a Meta y no está incluida; trae otros beneficios como la insignia de verificación, protección contra suplantación, 1 canal verificado, 4 dispositivos vinculados y una URL web personalizada. Algunos de estos servicios no están totalmente disponibles y otros se deben solicitar a Meta. Hoy el agente no se conecta a un calendario; si necesitas agendar citas, usamos un chatbot de nuestros niveles.',
   },
   {
     q: '¿Cuánto tarda en estar listo mi chatbot?',
