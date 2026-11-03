@@ -3,13 +3,13 @@ import { services, PROMO_END, waLink } from '../data'
 function PlanCard({ p, service }) {
   return (
     <div
-      className={`card-grad hover-lift relative flex flex-col rounded-[18px] px-5 py-5 hover:-translate-y-0.5 ${
+      className={`card-grad hover-lift relative flex flex-col rounded-[24px] px-5 py-5 hover:-translate-y-0.5 ${
         p.promo ? '!border-amber/50 shadow-[var(--shadow-medium),var(--shadow-glow-amber),inset_0_1px_0_rgba(255,255,255,0.06)]' : 'shadow-[var(--shadow-soft),inset_0_1px_0_rgba(255,255,255,0.04)]'
       }`}
     >
       {p.promo && (
         <span
-          className="absolute -top-[12px] right-4 rounded-[20px] px-3 py-1 text-xs font-semibold text-[#2B1400] shadow-soft"
+          className="absolute -top-[12px] right-4 rounded-[26px] px-3 py-1 text-xs font-semibold text-[#2B1400] shadow-soft"
           style={{ background: 'linear-gradient(160deg,#FFC170,#E8952E)' }}
         >
           {p.promo}
@@ -19,7 +19,7 @@ function PlanCard({ p, service }) {
       <p className="mb-4 text-[14px] leading-relaxed text-muted">{p.desc}</p>
       <div className="mt-auto">
         {p.oldPrice && <div className="text-[13px] text-muted line-through">{p.oldPrice}</div>}
-        <div className="font-display text-[20px] font-semibold text-amber">{p.price}</div>
+        <div className={`font-display text-[22px] font-extrabold ${p.promo ? 'text-amber' : 'text-teal'}`}>{p.price}</div>
         <div className="mt-0.5 text-[12.5px] font-medium text-muted">{p.priceNote}</div>
         {p.oldPrice && <div className="mt-1 text-[12.5px] font-semibold text-teal">Descuento válido hasta el {PROMO_END}</div>}
         <a
@@ -40,7 +40,8 @@ export default function Servicios() {
     <section className="section" id="servicios">
       <div className="wrap">
         <div className="mb-10 max-w-[680px]">
-          <h2 className="mb-3.5 text-[32px]">Nuestros servicios</h2>
+          <span className="eyebrow">Servicios</span>
+        <h2 className="mb-3.5 text-[32px] sm:text-[44px]">Nuestros servicios</h2>
           <p className="text-[17px] text-muted">
             Cuatro servicios para que atiendas, vendas y crezcas. Empieza por el que tu negocio necesite hoy y suma los demás cuando quieras.
           </p>
@@ -48,10 +49,10 @@ export default function Servicios() {
 
         {services.map((s) => (
           <div key={s.id} id={`servicio-${s.id}`} className="mb-12">
-            <div className="mb-5 flex items-start gap-4 border-b border-white/10 pb-4">
-              <span className="font-display text-[34px] font-bold leading-none text-blue">{s.number}</span>
+            <div className="mb-5 flex items-start gap-4 border-b border-teal/15 pb-4">
+              <span className="font-display text-[56px] font-black leading-none text-teal [text-shadow:0_0_40px_rgba(25,211,232,0.45)]">{s.number}</span>
               <div>
-                <h3 className="text-[22px] font-semibold text-navy">{s.title}</h3>
+                <h3 className="text-[24px] font-extrabold text-navy sm:text-[28px]">{s.title}</h3>
                 <p className="mt-1.5 max-w-[640px] text-[15px] text-muted">{s.summary}</p>
               </div>
             </div>

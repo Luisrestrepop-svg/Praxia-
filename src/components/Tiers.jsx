@@ -6,14 +6,14 @@ function TierGrid({ items }) {
       {items.map((t) => (
         <div
           key={t.name}
-          className={`card-grad hover-lift relative flex flex-col rounded-[20px] px-6 py-[26px] hover:-translate-y-[3px] ${
+          className={`card-grad hover-lift relative flex flex-col rounded-[26px] px-6 py-[26px] hover:-translate-y-[3px] ${
             t.recommended
               ? '!border-amber/50 shadow-[var(--shadow-medium),var(--shadow-glow-amber),inset_0_1px_0_rgba(255,255,255,0.06)]'
               : 'shadow-[var(--shadow-soft),inset_0_1px_0_rgba(255,255,255,0.04)]'
           }`}
         >
           <div className="mb-2.5 text-lg font-semibold text-navy">{t.name}</div>
-          <div className="mb-4 font-display text-[19px] font-semibold text-amber">
+          <div className="mb-4 font-display text-[22px] font-extrabold text-teal">
             {t.price}
             {t.priceNote && <span className="mt-0.5 block font-sans text-[12.5px] font-medium text-muted">{t.priceNote}</span>}
           </div>
@@ -40,7 +40,7 @@ function TierGrid({ items }) {
             </p>
           )}
           {t.audience && (
-            <div className="mt-auto border-t border-white/10 pt-3.5 text-[13.5px] leading-normal text-muted">{t.audience}</div>
+            <div className="mt-auto border-t border-teal/15 pt-3.5 text-[13.5px] leading-normal text-muted">{t.audience}</div>
           )}
         </div>
       ))}
@@ -53,7 +53,8 @@ export function NivelesIA() {
     <section className="section" id="whatsapp">
       <div className="wrap">
         <div className="mb-10 max-w-[640px]">
-          <h2 className="mb-3.5 text-[32px]">Servicios de personalización de WhatsApp: elige tu nivel</h2>
+          <span className="eyebrow">WhatsApp</span>
+          <h2 className="mb-3.5 text-[30px] sm:text-[40px]">Servicios de personalización de WhatsApp: elige tu nivel</h2>
           <p className="text-[17px] text-muted">
             Dentro de la automatización de WhatsApp, hay distintos niveles según qué tan compleja necesites que sea la conversación con tus clientes.
           </p>
@@ -72,9 +73,9 @@ export function NivelesIA() {
         </div>
 
         <h3 className="mb-5 text-[13px] font-semibold uppercase tracking-[0.12em] text-amber">Servicio con Meta</h3>
-        <div className="card-grad relative mb-8 rounded-[20px] !border-teal/50 px-6 py-[26px] shadow-[var(--shadow-medium),inset_0_1px_0_rgba(255,255,255,0.06)]">
+        <div className="card-grad relative mb-8 rounded-[26px] !border-teal/50 px-6 py-[26px] shadow-[var(--shadow-medium),inset_0_1px_0_rgba(255,255,255,0.06)]">
           <span
-            className="absolute -top-[13px] left-6 rounded-[20px] px-3 py-[5px] text-xs font-semibold text-[#0C2622] shadow-soft"
+            className="absolute -top-[13px] left-6 rounded-[26px] px-3 py-[5px] text-xs font-semibold text-[#0C2622] shadow-soft"
             style={{ background: 'linear-gradient(160deg,#4FE8CF,#3FE0C7)' }}
           >
             Nuevo
@@ -106,7 +107,7 @@ export function NivelesIA() {
           <h3 className="mb-4 text-[22px] font-semibold text-navy">Lo que incluye la suscripción de Meta</h3>
           <div className="grid gap-5 min-[901px]:grid-cols-3">
             {metaBenefits.groups.map((g) => (
-              <div key={g.title} className="card-grad rounded-[18px] px-5 py-5 shadow-[var(--shadow-soft),inset_0_1px_0_rgba(255,255,255,0.04)]">
+              <div key={g.title} className="card-grad rounded-[24px] px-5 py-5 shadow-[var(--shadow-soft),inset_0_1px_0_rgba(255,255,255,0.04)]">
                 <div className="mb-2.5 text-sm font-semibold uppercase tracking-[0.04em] text-teal">{g.title}</div>
                 <ul className="flex flex-col gap-2">
                   {g.items.map((it) => (

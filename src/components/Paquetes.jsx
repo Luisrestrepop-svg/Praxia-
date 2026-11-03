@@ -4,7 +4,8 @@ export default function Paquetes() {
   return (
     <section className="section bg-bg-alt text-white" id="paquetes">
       <div className="wrap">
-        <h2 className="mb-3.5 text-[32px] !text-white">Paquetes con ahorro</h2>
+        <span className="eyebrow">Paquetes</span>
+        <h2 className="mb-3.5 text-[32px] sm:text-[44px] !text-white">Paquetes con ahorro</h2>
         <p className="mb-12 max-w-[600px] text-[17px] text-[#9AA6B8]">
           Combina servicios y paga menos. Si prefieres no armar tu propia combinación, empieza con uno de estos y crece a tu ritmo.
         </p>
@@ -12,7 +13,7 @@ export default function Paquetes() {
           {plans.map((p) => (
             <div
               key={p.name}
-              className={`relative flex flex-col rounded-[20px] px-7 py-8 ${
+              className={`relative flex flex-col rounded-[26px] px-7 py-8 ${
                 p.featured
                   ? 'border-[1.5px] border-amber/50 shadow-[var(--shadow-medium),var(--shadow-glow-amber),inset_0_1px_0_rgba(255,255,255,0.06)]'
                   : 'border border-white/[0.06] shadow-[var(--shadow-medium),inset_0_1px_0_rgba(255,255,255,0.05)]'
@@ -21,7 +22,7 @@ export default function Paquetes() {
             >
               {p.badge && (
                 <span
-                  className={`absolute -top-[13px] left-7 rounded-[20px] px-3 py-[5px] text-xs font-semibold shadow-soft ${
+                  className={`absolute -top-[13px] left-7 rounded-[26px] px-3 py-[5px] text-xs font-semibold shadow-soft ${
                     p.promo ? 'text-[#0C2622]' : 'text-[#2B1400]'
                   }`}
                   style={{
@@ -35,7 +36,7 @@ export default function Paquetes() {
               )}
               <div className="mb-1.5 font-display text-[21px] font-semibold text-navy">{p.name}</div>
               <div className="mb-4 text-sm text-[#8FA3C0]">{p.tag}</div>
-              <div className="mb-6 font-display text-[26px] font-semibold text-amber">
+              <div className={`mb-6 font-display text-[28px] font-extrabold ${p.featured ? 'text-amber' : 'text-teal'}`}>
                 {p.price}
                 <span className="mt-0.5 block font-sans text-[12.5px] font-medium text-[#8FA3C0]">Pago único · {p.save}</span>
               </div>

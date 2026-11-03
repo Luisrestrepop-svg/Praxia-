@@ -27,7 +27,8 @@ export default function Mantenimiento() {
   return (
     <section className="section" id="mantenimiento">
       <div className="wrap">
-        <h2 className="mb-3.5 text-[32px]">Mantenimiento y actualización</h2>
+        <span className="eyebrow">Mantenimiento</span>
+        <h2 className="mb-3.5 text-[32px] sm:text-[44px]">Mantenimiento y actualización</h2>
         <p className="mb-12 max-w-[640px] text-[17px] text-muted">
           Tu negocio cambia, y lo que construimos juntos también debe hacerlo: nuevos precios, productos, horarios o respuestas para tus clientes. Nos encargamos de mantener todo al día y funcionando, para que tú te dediques a atender tu negocio.
         </p>
@@ -36,7 +37,7 @@ export default function Mantenimiento() {
           {options.map((o) => (
             <div
               key={o.name}
-              className={`card-grad hover-lift relative flex flex-col rounded-[20px] px-7 py-8 ${
+              className={`card-grad hover-lift relative flex flex-col rounded-[26px] px-7 py-8 ${
                 o.featured
                   ? '!border-amber/50 shadow-[var(--shadow-medium),var(--shadow-glow-amber),inset_0_1px_0_rgba(255,255,255,0.06)]'
                   : 'shadow-[var(--shadow-soft),inset_0_1px_0_rgba(255,255,255,0.04)]'
@@ -44,14 +45,14 @@ export default function Mantenimiento() {
             >
               {o.badge && (
                 <span
-                  className="absolute -top-[13px] left-7 rounded-[20px] px-3 py-[5px] text-xs font-semibold text-[#2B1400] shadow-soft"
+                  className="absolute -top-[13px] left-7 rounded-[26px] px-3 py-[5px] text-xs font-semibold text-[#2B1400] shadow-soft"
                   style={{ background: 'linear-gradient(160deg,#FFC170,#E8952E)' }}
                 >
                   {o.badge}
                 </span>
               )}
               <div className="mb-2.5 text-lg font-semibold text-navy">{o.name}</div>
-              <div className="mb-5 font-display text-[26px] font-semibold text-amber">
+              <div className={`mb-5 font-display text-[28px] font-extrabold ${o.featured ? 'text-amber' : 'text-teal'}`}>
                 {o.price}
                 <span className="mt-0.5 block font-sans text-[12.5px] font-medium text-muted">{o.priceNote}</span>
               </div>

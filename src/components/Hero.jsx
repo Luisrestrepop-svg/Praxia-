@@ -16,6 +16,13 @@ const messages = [
   { side: 'out', text: '¡Recibido! Tu chaqueta queda separada. Te esperamos mañana a las 4:00 p. m. 🙌' },
 ]
 
+const heroChips = [
+  { icon: '💬', label: 'Personalización de WhatsApp', href: '#servicio-whatsapp' },
+  { icon: '🌐', label: 'Página web y catálogos', href: '#servicio-web' },
+  { icon: '📊', label: 'Análisis de datos', href: '#servicio-datos' },
+  { icon: '📣', label: 'Redes y publicidad', href: '#servicio-redes' },
+]
+
 const GAP_IN = 1500 // pausa antes de un mensaje del cliente
 const TYPING = 1000 // tiempo que "escribe" el agente
 const END_PAUSE = 5000 // pausa al terminar antes de repetir
@@ -118,28 +125,50 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="pb-[60px] pt-[88px] max-sm:pt-16">
-      <div className="wrap grid items-center gap-12 min-[901px]:grid-cols-[1.1fr_0.9fr] min-[901px]:gap-16">
+    <section className="relative overflow-hidden pb-20 pt-14 max-sm:pt-10">
+      <div className="pointer-events-none absolute -right-40 top-10 h-[520px] w-[520px] rounded-full bg-[#12337a]/40 blur-[120px]" aria-hidden="true" />
+      <div className="wrap relative grid items-center gap-14 min-[901px]:grid-cols-[1.15fr_0.85fr] min-[901px]:gap-12">
         <div>
-          <h1 className="mb-5 text-[34px] tracking-[-0.5px] sm:text-5xl">Actualiza tu negocio y no pierdas más clientes</h1>
-          <p className="-mt-2.5 mb-5 text-[17px] font-semibold text-amber">Automatización sin barreras</p>
-          <p className="mb-8 max-w-[480px] text-lg text-muted">
+          <span className="eyebrow">Automatización con IA</span>
+          <h1 className="mb-6 text-[46px] font-black uppercase leading-[0.98] tracking-[-0.03em] sm:text-[68px] min-[1101px]:text-[84px]">
+            Conecta
+            <span className="block text-teal [text-shadow:0_0_50px_rgba(25,211,232,0.45)]">tu negocio</span>
+          </h1>
+          <p className="mb-9 max-w-[520px] text-[17px] leading-relaxed text-muted sm:text-lg">
             Ponemos un chatbot en tu WhatsApp, creamos tu página web, medimos lo que funciona y te traemos más clientes — explicándote cada paso, sin tecnicismos.
           </p>
-          <div className="flex flex-wrap gap-3.5">
-            <a href={waLink()} target="_blank" rel="noopener noreferrer" className="btn btn-amber">Habla con nosotros por WhatsApp</a>
+          <div className="mb-10 flex flex-wrap gap-3.5">
+            <a href={waLink()} target="_blank" rel="noopener noreferrer" className="btn btn-wa">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.2 13.9c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.2 1.5z" />
+              </svg>
+              Habla con nosotros por WhatsApp
+            </a>
             <a href="#servicios" className="btn btn-outline">Ver servicios</a>
           </div>
+          <ul className="grid max-w-[560px] grid-cols-2 gap-3">
+            {heroChips.map((c) => (
+              <li key={c.label}>
+                <a
+                  href={c.href}
+                  className="card-grad hover-lift flex items-center gap-3 rounded-[24px] px-4 py-3.5 text-[14px] font-bold leading-tight text-navy"
+                >
+                  <span className="text-2xl" aria-hidden="true">{c.icon}</span>
+                  {c.label}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div ref={phoneRef} className="mx-auto">
           <div
             role="img"
             aria-label="Ejemplo de conversación de WhatsApp con un chatbot que responde, agenda una cita y envía el enlace de pago"
-            className="mx-auto w-[290px] rounded-[32px] border border-white/10 p-3.5 shadow-deep"
-            style={{ background: 'linear-gradient(165deg,#2A303A,#181B20)' }}
+            className="mx-auto w-[300px] rounded-[36px] border border-teal/30 p-3.5 shadow-[0_0_70px_rgba(25,211,232,0.25),var(--shadow-deep)]"
+            style={{ background: 'linear-gradient(165deg,#16306a,#07122f)' }}
           >
-            <div className="flex h-[540px] flex-col overflow-hidden rounded-[20px] bg-[#EAF6F3]">
+            <div className="flex h-[540px] flex-col overflow-hidden rounded-[24px] bg-[#EAF6F3]">
               <div className="flex items-center gap-2.5 bg-[#0F9E8B] px-4 py-3.5 text-sm font-semibold text-white">
                 <span className="h-2 w-2 rounded-full bg-white opacity-70" /> Tienda Doña Marta
                 <span className="ml-auto text-[11px] font-medium opacity-80">chatbot</span>
@@ -164,7 +193,7 @@ export default function Hero() {
               </div>
             </div>
           </div>
-          <p className="mt-3 text-center text-[12.5px] text-muted">Ejemplo ilustrativo: el chatbot atiende, agenda y envía el enlace de pago.</p>
+          <p className="mt-4 text-center text-[12.5px] text-muted">Ejemplo ilustrativo: el chatbot atiende, agenda y envía el enlace de pago.</p>
         </div>
       </div>
     </section>

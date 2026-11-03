@@ -32,7 +32,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="flex flex-wrap justify-between gap-2.5 border-t border-white/10 pt-6 text-[13px] text-[#69748A]">
+        <div className="flex flex-wrap justify-between gap-2.5 border-t border-teal/15 pt-6 text-[13px] text-[#69748A]">
           <span>© 2026 Praxia Labs. Todos los derechos reservados.</span>
           <span>Hecho en Medellín</span>
         </div>

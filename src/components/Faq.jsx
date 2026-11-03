@@ -2,9 +2,10 @@ import { faqs } from '../data'
 
 export default function Faq() {
   return (
-    <section className="section border-y border-white/10 bg-surface" id="preguntas-frecuentes">
+    <section className="section border-y border-teal/15 bg-surface" id="preguntas-frecuentes">
       <div className="wrap !max-w-[820px]">
-        <h2 className="mb-3.5 text-[32px]">Preguntas frecuentes</h2>
+        <span className="eyebrow">Preguntas</span>
+        <h2 className="mb-3.5 text-[32px] sm:text-[44px]">Preguntas frecuentes</h2>
         <p className="mb-10 text-[17px] text-muted">
           Lo que más nos preguntan los dueños de negocio antes de empezar.
         </p>
