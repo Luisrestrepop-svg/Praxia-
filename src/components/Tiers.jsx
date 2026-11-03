@@ -1,4 +1,4 @@
-import { benefits, tiers } from '../data'
+import { benefits, tiers, metaAgent, waLink } from '../data'
 
 function TierGrid({ items }) {
   return (
@@ -53,7 +53,7 @@ export function NivelesIA() {
     <section className="section" id="whatsapp">
       <div className="wrap">
         <div className="mb-10 max-w-[640px]">
-          <h2 className="mb-3.5 text-[32px]">Chatbots de WhatsApp: elige tu nivel</h2>
+          <h2 className="mb-3.5 text-[32px]">Servicios de personalización de WhatsApp: elige tu nivel</h2>
           <p className="text-[17px] text-muted">
             Dentro de la automatización de WhatsApp, hay distintos niveles según qué tan compleja necesites que sea la conversación con tus clientes.
           </p>
@@ -69,6 +69,36 @@ export function NivelesIA() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="card-grad relative mb-8 rounded-[20px] !border-teal/50 px-6 py-[26px] shadow-[var(--shadow-medium),inset_0_1px_0_rgba(255,255,255,0.06)]">
+          <span
+            className="absolute -top-[13px] left-6 rounded-[20px] px-3 py-[5px] text-xs font-semibold text-[#0C2622] shadow-soft"
+            style={{ background: 'linear-gradient(160deg,#4FE8CF,#3FE0C7)' }}
+          >
+            Nuevo
+          </span>
+          <div className="grid gap-6 min-[901px]:grid-cols-[1.3fr_1fr]">
+            <div>
+              <div className="mb-2 text-lg font-semibold text-navy">{metaAgent.name}</div>
+              <p className="mb-4 text-[15px] leading-relaxed text-muted">{metaAgent.text}</p>
+              <div className="font-display text-[22px] font-semibold text-amber">{metaAgent.price}</div>
+              <div className="mb-4 text-[12.5px] font-medium text-muted">{metaAgent.priceNote}</div>
+              <a href={waLink('Hola, quiero información sobre la configuración del agente de IA de Meta en Praxia Labs.')} target="_blank" rel="noopener noreferrer" className="btn btn-amber btn-sm">
+                Quiero el agente de Meta
+              </a>
+            </div>
+            <div>
+              <ul className="mb-4 flex flex-col gap-2">
+                {metaAgent.feats.map((f) => (
+                  <li key={f} className="relative pl-[18px] text-sm before:absolute before:left-0 before:top-[7px] before:h-1.5 before:w-1.5 before:rounded-full before:bg-teal">{f}</li>
+                ))}
+              </ul>
+              <p className="rounded-lg border border-amber/25 bg-amber/10 px-3 py-2.5 text-[13px] leading-normal text-[#FFD9A3]">
+                <span className="font-semibold">Nota:</span> {metaAgent.note}
+              </p>
+            </div>
+          </div>
         </div>
 
         <TierGrid items={tiers} />

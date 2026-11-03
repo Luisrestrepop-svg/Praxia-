@@ -5,10 +5,11 @@ export const services = [
   {
     id: 'whatsapp',
     number: '1',
-    title: 'Chatbots de WhatsApp',
+    title: 'Servicios de personalización de WhatsApp',
     summary: 'Un chatbot en tu WhatsApp que atiende a tus clientes a toda hora. Elige el nivel según qué tan compleja necesites la conversación.',
     icon: 'M21 11.5a8.4 8.4 0 01-8.4 8.4 8.3 8.3 0 01-3.9-1L3 20l1.2-5.6a8.3 8.3 0 01-1-3.9A8.4 8.4 0 0111.6 2a8.4 8.4 0 019.4 8.4z',
     plans: [
+      { name: 'Agente de IA de Meta', desc: 'Configuramos y entrenamos el agente de IA de WhatsApp Business con la información de tu negocio. Meta lo está habilitando poco a poco; su suscripción se paga directo a Meta.', price: '$500.000 COP', priceNote: 'Configuración · pago único', promo: 'Nuevo', priceValue: 500000 },
       { name: 'Chatbot con respuestas fijas', desc: 'Menú de opciones, respuestas predefinidas y flujos básicos. Ideal si tus clientes preguntan siempre lo mismo: horarios, precios y ubicación.', price: '$1.000.000 COP', priceNote: 'Pago único', priceValue: 1000000 },
       { name: 'Chatbot con IA conversacional', desc: 'Responde preguntas abiertas y entiende el contexto, con inteligencia artificial integrada a WhatsApp Business.', price: '$1.500.000 COP', priceNote: 'Pago único', priceValue: 1500000 },
       { name: 'Agente autónomo con integraciones', desc: 'Califica leads, actualiza tu CRM y agenda citas, conectado a tus sistemas.', price: 'Desde $2.000.000 COP', priceNote: 'Según especificaciones técnicas', priceValue: 2000000 },
@@ -86,6 +87,16 @@ export const benefits = [
   },
 ]
 
+// Servicio nuevo (Meta lo habilita de forma gradual)
+export const metaAgent = {
+  name: 'Novedad: agente de IA de Meta para WhatsApp Business',
+  price: '$500.000 COP',
+  priceNote: 'Configuración y entrenamiento · pago único',
+  text: 'Meta está habilitando poco a poco un agente de IA dentro de WhatsApp Business que responde a tus clientes. Nosotros lo configuramos y lo entrenamos con la información de tu negocio: servicios, precios, horarios y preguntas frecuentes, para que responda bien desde el primer día.',
+  feats: ['Carga de la información de tu empresa y tus productos', 'Respuestas a las preguntas frecuentes de tus clientes', 'Pruebas antes de activarlo con clientes reales', 'Ajustes después de las primeras conversaciones'],
+  note: 'El agente lo habilita Meta de forma gradual y todavía está empezando: puede no estar disponible aún en tu cuenta. Su suscripción se paga directo a Meta y no está incluida. Hoy no se conecta a un calendario, así que para agendar citas conectadas a tu agenda usamos un chatbot de los niveles de arriba.',
+}
+
 export const tiers = [
   {
     name: 'Chatbot con respuestas fijas (reglas)',
@@ -149,7 +160,7 @@ export const plans = [
 
 export const navLinks = [
   { href: '#servicios', label: 'Servicios' },
-  { href: '#whatsapp', label: 'Chatbots' },
+  { href: '#whatsapp', label: 'WhatsApp' },
   { href: '#paquetes', label: 'Paquetes' },
   { href: '#nosotros', label: 'Nosotros' },
 ]
@@ -164,11 +175,15 @@ export const waLink = (msg = 'Hola quiero más información de Praxia Labs y sus
 export const faqs = [
   {
     q: '¿Qué hace Praxia Labs?',
-    a: 'Praxia Labs es un equipo de Medellín que ayuda a tiendas, restaurantes y negocios de barrio a atender, vender y crecer en lo digital. Tenemos cuatro servicios: chatbots de WhatsApp, página web y catálogos, análisis de datos, y redes sociales y publicidad.',
+    a: 'Praxia Labs es un equipo de Medellín que ayuda a tiendas, restaurantes y negocios de barrio a atender, vender y crecer en lo digital. Tenemos cuatro servicios: servicios de personalización de WhatsApp (chatbots y agente de IA), página web y catálogos, análisis de datos, y redes sociales y publicidad.',
   },
   {
     q: '¿Cuánto cuesta un chatbot de WhatsApp para mi negocio?',
     a: 'Tenemos tres niveles. El chatbot con respuestas fijas cuesta $1.000.000 COP (pago único), el chatbot con IA conversacional cuesta $1.500.000 COP y el agente autónomo con integraciones parte desde $2.000.000 COP según la complejidad de tu proyecto. Los servicios de terceros, como WhatsApp o la IA que elijas, se pagan aparte directamente al proveedor.',
+  },
+  {
+    q: '¿Qué es el agente de IA de Meta y ustedes lo configuran?',
+    a: 'Es un agente de IA que Meta está habilitando poco a poco dentro de WhatsApp Business y que responde a tus clientes. Todavía está empezando y puede no estar disponible en tu cuenta. Nosotros lo configuramos y lo entrenamos con la información de tu negocio por $500.000 COP (pago único). Su suscripción se paga directo a Meta y no está incluida. Hoy no se conecta a un calendario; si necesitas agendar citas, usamos un chatbot de los otros niveles.',
   },
   {
     q: '¿Cuánto tarda en estar listo mi chatbot?',
