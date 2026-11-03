@@ -10,7 +10,7 @@ export const services = [
     icon: 'M21 11.5a8.4 8.4 0 01-8.4 8.4 8.3 8.3 0 01-3.9-1L3 20l1.2-5.6a8.3 8.3 0 01-1-3.9A8.4 8.4 0 0111.6 2a8.4 8.4 0 019.4 8.4z',
     plans: [
       { name: 'Agente de IA de Meta', desc: 'Configuramos y entrenamos el agente de IA de WhatsApp Business con la información de tu negocio. Meta lo está habilitando poco a poco; su suscripción se paga directo a Meta.', price: '$500.000 COP', priceNote: 'Configuración · pago único', promo: 'Nuevo', priceValue: 500000 },
-      { name: 'Chatbot con respuestas fijas', desc: 'Menú de opciones, respuestas predefinidas y flujos básicos. Ideal si tus clientes preguntan siempre lo mismo: horarios, precios y ubicación.', price: '$1.000.000 COP', priceNote: 'Pago único', priceValue: 1000000 },
+      { name: 'Chatbot personalizable', desc: 'Un chatbot hecho a tu medida: tú defines el menú de opciones, las respuestas y los flujos. Ideal si tus clientes preguntan siempre lo mismo: horarios, precios y ubicación.', price: '$1.000.000 COP', priceNote: 'Pago único', priceValue: 1000000 },
       { name: 'Chatbot con IA conversacional', desc: 'Responde preguntas abiertas y entiende el contexto, con inteligencia artificial integrada a WhatsApp Business.', price: '$1.500.000 COP', priceNote: 'Pago único', priceValue: 1500000 },
       { name: 'Agente autónomo con integraciones', desc: 'Califica leads, actualiza tu CRM y agenda citas, conectado a tus sistemas.', price: 'Desde $2.000.000 COP', priceNote: 'Según especificaciones técnicas', priceValue: 2000000 },
     ],
@@ -99,14 +99,14 @@ export const metaAgent = {
 
 export const tiers = [
   {
-    name: 'Chatbot con respuestas fijas (reglas)',
+    name: 'Chatbot personalizable',
     price: '$1.000.000 COP',
     priceNote: 'Pago único',
     time: '1–2 semanas',
     includes: 'Diseño de flujos, configuración, pruebas y capacitación.',
     label: 'Funcionalidades',
-    feats: ['Menú de opciones', 'Respuestas predefinidas', 'Flujos básicos'],
-    audience: 'Ideal si tus clientes suelen preguntar lo mismo: horarios, precios y ubicación.',
+    feats: ['Menú de opciones a tu medida', 'Respuestas que tú defines', 'Flujos básicos personalizados'],
+    audience: 'Ideal si tus clientes suelen preguntar lo mismo: horarios, precios y ubicación. Se adapta a la forma de hablar y a las reglas de tu negocio.',
   },
   {
     name: 'Chatbot con IA conversacional',
@@ -138,7 +138,7 @@ export const plans = [
     tag: 'Para empezar con lo básico',
     price: 'Desde $1.950.000 COP',
     save: 'Ahorras $250.000',
-    feats: ['Chatbot con respuestas fijas', 'Página web básica', 'Ficha de Google Business Profile'],
+    feats: ['Chatbot personalizable', 'Página web básica', 'Ficha de Google Business Profile'],
   },
   {
     name: 'Crecimiento',
@@ -179,7 +179,7 @@ export const faqs = [
   },
   {
     q: '¿Cuánto cuesta un chatbot de WhatsApp para mi negocio?',
-    a: 'Tenemos tres niveles. El chatbot con respuestas fijas cuesta $1.000.000 COP (pago único), el chatbot con IA conversacional cuesta $1.500.000 COP y el agente autónomo con integraciones parte desde $2.000.000 COP según la complejidad de tu proyecto. Los servicios de terceros, como WhatsApp o la IA que elijas, se pagan aparte directamente al proveedor.',
+    a: 'Tenemos tres niveles. El chatbot personalizable cuesta $1.000.000 COP (pago único), el chatbot con IA conversacional cuesta $1.500.000 COP y el agente autónomo con integraciones parte desde $2.000.000 COP según la complejidad de tu proyecto. Los servicios de terceros, como WhatsApp o la IA que elijas, se pagan aparte directamente al proveedor.',
   },
   {
     q: '¿Qué es el agente de IA de Meta y ustedes lo configuran?',
@@ -187,7 +187,7 @@ export const faqs = [
   },
   {
     q: '¿Cuánto tarda en estar listo mi chatbot?',
-    a: 'El chatbot con respuestas fijas queda listo en 1 a 2 semanas, el chatbot con IA conversacional en 2 a 4 semanas y el agente autónomo en 6 a 12 semanas. Si hay que crear la cuenta de WhatsApp Business API desde cero, suma entre 1 y 2 semanas.',
+    a: 'El chatbot personalizable queda listo en 1 a 2 semanas, el chatbot con IA conversacional en 2 a 4 semanas y el agente autónomo en 6 a 12 semanas. Si hay que crear la cuenta de WhatsApp Business API desde cero, suma entre 1 y 2 semanas.',
   },
   {
     q: '¿Cuánto cuesta una página web?',
@@ -199,7 +199,7 @@ export const faqs = [
   },
   {
     q: '¿Qué incluyen los paquetes y cuánto cuestan?',
-    a: '“Arranque” cuesta desde $1.950.000 COP: chatbot con respuestas fijas y página web básica. “Crecimiento” cuesta $2.650.000 COP: chatbot con IA conversacional, página web básica e Impulso visual. “Todo en uno” cuesta desde $5.400.000 COP: agente autónomo con integraciones, web con tienda y tablero de resultados. El precio de Todo en uno incluye la web con tienda con 20% de descuento, válido hasta el 15 de noviembre de 2026. Los precios con “desde” dependen de las especificaciones de tu negocio.',
+    a: '“Arranque” cuesta desde $1.950.000 COP: chatbot personalizable y página web básica. “Crecimiento” cuesta $2.650.000 COP: chatbot con IA conversacional, página web básica e Impulso visual. “Todo en uno” cuesta desde $5.400.000 COP: agente autónomo con integraciones, web con tienda y tablero de resultados. El precio de Todo en uno incluye la web con tienda con 20% de descuento, válido hasta el 15 de noviembre de 2026. Los precios con “desde” dependen de las especificaciones de tu negocio.',
   },
 
   {
