@@ -37,7 +37,7 @@ export default function Servicios() {
   return (
     <section className="section" id="servicios">
       <div className="wrap">
-        <div className="mb-10 max-w-[680px]">
+        <div className="mb-8 max-w-[680px]">
           <span className="eyebrow">Servicios</span>
         <h2 className="mb-3.5 text-[32px] sm:text-[44px]">Nuestros servicios</h2>
           <p className="text-[17px] text-muted">
@@ -46,7 +46,7 @@ export default function Servicios() {
         </div>
 
         {services.map((s) => (
-          <div key={s.id} id={`servicio-${s.id}`} className="mb-12">
+          <div key={s.id} id={`servicio-${s.id}`} className="mb-9">
             <div className="mb-5 flex items-start gap-4 border-b border-teal/15 pb-4">
               <span className="font-display text-[56px] font-black leading-none text-teal [text-shadow:0_0_40px_rgba(25,211,232,0.45)]">{s.number}</span>
               <div>

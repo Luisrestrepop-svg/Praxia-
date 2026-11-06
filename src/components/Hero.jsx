@@ -124,7 +124,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative overflow-hidden pb-20 pt-14 max-sm:pt-10">
+    <section className="relative overflow-hidden pb-12 pt-12 max-sm:pt-8">
       <div className="pointer-events-none absolute -right-40 top-10 h-[520px] w-[520px] rounded-full bg-[#12337a]/40 blur-[120px]" aria-hidden="true" />
       <div className="wrap relative grid items-center gap-14 min-[901px]:grid-cols-[1.15fr_0.85fr] min-[901px]:gap-12">
         <div>

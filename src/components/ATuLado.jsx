@@ -6,7 +6,7 @@ export default function ATuLado() {
       <div className="wrap">
         <span className="eyebrow">Servicio mensual</span>
         <h2 className="mb-3.5 text-[32px] sm:text-[44px]">{aTuLado.name}</h2>
-        <p className="mb-10 max-w-[680px] text-[17px] text-muted">{aTuLado.tagline}</p>
+        <p className="mb-8 max-w-[680px] text-[17px] text-muted">{aTuLado.tagline}</p>
 
         <div className="grid gap-5 min-[901px]:grid-cols-[1.3fr_1fr]">
           <div className="card-grad rounded-[26px] px-6 py-6 shadow-[var(--shadow-soft),inset_0_1px_0_rgba(255,255,255,0.04)]">

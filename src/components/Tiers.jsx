@@ -1,11 +1,11 @@
-import { proceso, procesoNota, metaBenefits, waLink } from '../data'
+import { proceso, procesoNota, waLink } from '../data'
 
 // Sección "Proceso": del primer mensaje a la reseña
 export function NivelesIA() {
   return (
     <section className="section" id="whatsapp">
       <div className="wrap">
-        <div className="mb-10 max-w-[720px]">
+        <div className="mb-8 max-w-[720px]">
           <span className="eyebrow">Automatización de WhatsApp</span>
           <h2 className="mb-3.5 text-[30px] sm:text-[44px]">Atiende, agenda, cobra y fideliza</h2>
           <p className="text-[17px] text-muted">
@@ -42,42 +42,6 @@ export function NivelesIA() {
             Quiero automatizar mi WhatsApp
           </a>
         </div>
-      </div>
-    </section>
-  )
-}
-
-// Sección "Lo que incluye la suscripción de Meta"
-export function MetaBeneficios() {
-  return (
-    <section className="section border-y border-teal/15 bg-surface/60" id="meta">
-      <div className="wrap">
-        <span className="eyebrow">Meta</span>
-        <h2 className="mb-3.5 text-[30px] sm:text-[40px]">Lo que incluye la suscripción de Meta</h2>
-        <p className="mb-10 max-w-[680px] text-[17px] text-muted">
-          La suscripción de Meta se paga directo a Meta y no está incluida en nuestros precios. Esto es lo que trae para tu WhatsApp Business.
-        </p>
-        <div className="grid gap-5 min-[901px]:grid-cols-3">
-          {metaBenefits.groups.map((g) => (
-            <div key={g.title} className="card-grad rounded-[24px] px-5 py-5 shadow-[var(--shadow-soft),inset_0_1px_0_rgba(255,255,255,0.04)]">
-              <div className="mb-2.5 text-sm font-semibold uppercase tracking-[0.04em] text-teal">{g.title}</div>
-              <ul className="flex flex-col gap-2">
-                {g.items.map((it) => (
-                  <li key={it} className="relative pl-[22px] text-[14.5px] before:absolute before:left-0 before:top-0 before:text-[#25D366] before:content-['✓']">{it}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-        <div className="mt-5 rounded-[20px] border border-[#25D366]/40 bg-[#25D366]/10 px-5 py-4">
-          <div className="mb-2 text-sm font-semibold uppercase tracking-[0.04em] text-[#25D366]">✓ {metaBenefits.does.title}</div>
-          <ul className="grid gap-1.5 min-[701px]:grid-cols-2">
-            {metaBenefits.does.items.map((it) => (
-              <li key={it} className="text-[14.5px] leading-relaxed text-body">{it}</li>
-            ))}
-          </ul>
-        </div>
-        <p className="mt-4 text-[14px] font-medium leading-relaxed text-[#FFD9A3]">{metaBenefits.note}</p>
       </div>
     </section>
   )

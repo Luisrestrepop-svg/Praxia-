@@ -13,8 +13,6 @@ Dos posibilidades:
 - Posibilidad 1, agente de IA de Meta: el cliente paga la suscripción directo a Meta y adquiere su IA; Praxia la configura y le da las primeras indicaciones por $400.000 COP (pago único). Responde las 24 horas, agenda en Google Calendar, envía recordatorios con opción de asistir o no y pasa a una persona lo que no puede resolver. Meta lo habilita de forma gradual y todavía está empezando; puede no estar disponible aún en la cuenta.
 - Posibilidad 2, chatbot de Praxia: desde $280.000 COP al mes. Tiene lo que ofrece Meta, más personalización para pagos (enlace de pago para abono o pago completo), posventa (diagnóstico y evaluación de cómo se comportan las ventas) y reseñas (estrategias de invitación en redes sociales).
 
-Lo que incluye la suscripción de Meta (se paga directo a Meta): protección contra suplantación de identidad, Meta Business Agent, 4 dispositivos vinculados, URL web personalizada y más chats nuevos (beneficio de prueba). La insignia de verificación y el canal verificado aún no están disponibles. Algunos servicios no están totalmente disponibles y otros se deben solicitar a Meta.
-
 ## 2. Páginas web
 
 - Página web básica: desde $1.200.000 COP. Hasta 4 secciones, botón de WhatsApp y ficha de Google Business Profile optimizada.

@@ -6,7 +6,7 @@ export default function Paquetes() {
       <div className="wrap">
         <span className="eyebrow">Paquetes</span>
         <h2 className="mb-3.5 text-[32px] sm:text-[44px] !text-white">Paquetes con ahorro</h2>
-        <p className="mb-12 max-w-[600px] text-[17px] text-[#9AA6B8]">
+        <p className="mb-8 max-w-[600px] text-[17px] text-[#9AA6B8]">
           Combina servicios y paga menos. Si prefieres no armar tu propia combinación, empieza con uno de estos y crece a tu ritmo.
         </p>
         <div className="grid gap-6 min-[901px]:grid-cols-3">

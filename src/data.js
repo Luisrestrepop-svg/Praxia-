@@ -48,17 +48,6 @@ export const proceso = [
 ]
 export const procesoNota = 'El agente de Meta lo habilita Meta de forma gradual y puede no estar disponible aún en tu cuenta. Su suscripción se paga directo a Meta.'
 
-// Beneficios de la suscripción de Meta (pantalla de suscripción, noviembre 2026)
-export const metaBenefits = {
-  groups: [
-    { title: 'Muestra que tu perfil es auténtico', items: ['Insignia de verificación (aún no disponible)', 'Protección contra suplantación de identidad', '1 canal verificado (aún no disponible)'] },
-    { title: 'Meta Business Agent', items: ['Respuestas a tus clientes las 24 horas (Meta lo habilita poco a poco: está empezando)', 'Agenda citas con Google Calendar y envía recordatorios'] },
-    { title: 'Amplía tus operaciones', items: ['4 dispositivos vinculados', 'URL web personalizada', 'Más chats nuevos (beneficio de prueba)'] },
-  ],
-  does: { title: 'Lo que hace con tus citas', items: ['Agenda las citas en tu Google Calendar', 'Envía recordatorios con opción de asistir o no', 'Si el cliente cancela o pospone, se agenda como una cita nueva', 'Lo que no puede resolver lo pasa a una persona'] },
-  note: 'Nota: algunos de estos servicios no están totalmente disponibles y otros se deben solicitar a Meta. La suscripción se paga directo a Meta.',
-}
-
 export const whyItems = [
   {
     title: 'Sin perder tiempo',

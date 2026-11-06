@@ -95,7 +95,7 @@
 
 @layer components {
   .wrap { @apply mx-auto max-w-[1160px] px-6 sm:px-8; }
-  .section { @apply py-16 sm:py-[104px]; }
+  .section { @apply py-12 sm:py-[64px]; }
 
   .eyebrow {
     @apply mb-4 inline-flex items-center gap-2 text-[12.5px] font-bold uppercase tracking-[0.2em] text-teal;

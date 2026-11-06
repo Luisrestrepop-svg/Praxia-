@@ -6,7 +6,7 @@ export default function Why() {
       <div className="wrap">
         <span className="eyebrow">Cómo trabajamos</span>
         <h2 className="mb-3.5 text-[32px] sm:text-[44px]">Sabemos por qué te cuesta dar el salto</h2>
-        <p className="mb-12 max-w-[600px] text-[17px] text-muted">
+        <p className="mb-8 max-w-[600px] text-[17px] text-muted">
           No te sobra tiempo para aprender aplicaciones nuevas, y contratar a alguien de tecnología no siempre es viable. Por eso hicimos servicios simples, explicados en tu idioma y con acompañamiento real.
         </p>
         <div className="grid gap-6 min-[801px]:grid-cols-3">

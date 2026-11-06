@@ -2,7 +2,7 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import Why from './components/Why'
 import Servicios from './components/Servicios'
-import { NivelesIA, MetaBeneficios } from './components/Tiers'
+import { NivelesIA } from './components/Tiers'
 import ATuLado from './components/ATuLado'
 import Paquetes from './components/Paquetes'
 import Mantenimiento from './components/Mantenimiento'
@@ -25,7 +25,6 @@ export default function App() {
         <NivelesIA />
         <Servicios />
         <ATuLado />
-        <MetaBeneficios />
         <Paquetes />
         <Mantenimiento />
         <Faq />
