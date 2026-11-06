@@ -17,10 +17,9 @@ const messages = [
 ]
 
 const heroChips = [
-  { icon: '💬', label: 'Personalización de WhatsApp', href: '#servicio-whatsapp' },
-  { icon: '🌐', label: 'Página web y catálogos', href: '#servicio-web' },
-  { icon: '📊', label: 'Análisis de datos', href: '#servicio-datos' },
-  { icon: '📣', label: 'Redes y publicidad', href: '#servicio-redes' },
+  { icon: '💬', label: 'Automatización de WhatsApp', href: '#whatsapp' },
+  { icon: '🌐', label: 'Creación de páginas web', href: '#servicio-web' },
+  { icon: '🤝', label: 'Praxia a tu lado: administramos tu WhatsApp y tu página web', href: '#a-tu-lado', wide: true },
 ]
 
 const GAP_IN = 1500 // pausa antes de un mensaje del cliente
@@ -135,7 +134,7 @@ export default function Hero() {
             <span className="block text-teal [text-shadow:0_0_50px_rgba(25,211,232,0.45)]">tu negocio</span>
           </h1>
           <p className="mb-9 max-w-[520px] text-[17px] leading-relaxed text-muted sm:text-lg">
-            Ponemos un chatbot en tu WhatsApp, creamos tu página web, medimos lo que funciona y te traemos más clientes — explicándote cada paso, sin tecnicismos.
+            Automatizamos tu WhatsApp, creamos tu página web y las administramos cada mes — explicándote cada paso, sin tecnicismos.
           </p>
           <div className="mb-10 flex flex-wrap gap-3.5">
             <a href={waLink()} target="_blank" rel="noopener noreferrer" className="btn btn-wa">
@@ -146,9 +145,9 @@ export default function Hero() {
             </a>
             <a href="#servicios" className="btn btn-outline">Ver servicios</a>
           </div>
-          <ul className="grid max-w-[560px] grid-cols-2 gap-3">
+          <ul className="grid max-w-[520px] grid-cols-2 gap-3">
             {heroChips.map((c) => (
-              <li key={c.label}>
+              <li key={c.label} className={c.wide ? "col-span-2" : ""}>
                 <a
                   href={c.href}
                   className="card-grad hover-lift flex items-center gap-3 rounded-[24px] px-4 py-3.5 text-[14px] font-bold leading-tight text-navy"

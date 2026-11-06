@@ -1,4 +1,4 @@
-import { plans, waLink, PROMO_END } from '../data'
+import { plans, waLink } from '../data'
 
 export default function Paquetes() {
   return (
@@ -38,7 +38,7 @@ export default function Paquetes() {
               <div className="mb-4 text-sm text-[#8FA3C0]">{p.tag}</div>
               <div className={`mb-6 font-display text-[28px] font-extrabold ${p.featured ? 'text-amber' : 'text-teal'}`}>
                 {p.price}
-                <span className="mt-0.5 block font-sans text-[12.5px] font-medium text-[#8FA3C0]">Pago único · {p.save}</span>
+                <span className="mt-0.5 block font-sans text-[12.5px] font-medium text-[#8FA3C0]">{p.note || `Pago único · ${p.save}`}</span>
               </div>
               <ul className="mb-7 flex flex-1 flex-col gap-3">
                 {p.feats.map((f) => (
@@ -62,8 +62,7 @@ export default function Paquetes() {
           ))}
         </div>
         <p className="mt-8 max-w-[760px] text-[14px] leading-relaxed text-[#9AA6B8]">
-          El precio de Todo en uno incluye la web con tienda con 20% de descuento, válido hasta el {PROMO_END}. No incluyen servicios de terceros como WhatsApp, la inteligencia artificial que elijas, el almacenamiento de datos, el dominio, el hosting ni la inversión en anuncios. El mantenimiento de la web y el acompañamiento mensual son opcionales y se cotizan aparte.
-        </p>
+          No incluyen servicios de terceros: la suscripción de Meta, WhatsApp, la IA que elijas, el dominio ni el hosting. “Praxia a tu lado” ($500.000 al mes) es opcional y se contrata aparte.</p>
       </div>
     </section>
   )

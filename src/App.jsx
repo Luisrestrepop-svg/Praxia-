@@ -2,7 +2,8 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import Why from './components/Why'
 import Servicios from './components/Servicios'
-import { NivelesIA } from './components/Tiers'
+import { NivelesIA, MetaBeneficios } from './components/Tiers'
+import ATuLado from './components/ATuLado'
 import Paquetes from './components/Paquetes'
 import Mantenimiento from './components/Mantenimiento'
 import Faq from './components/Faq'
@@ -21,8 +22,10 @@ export default function App() {
       <main id="top" tabIndex={-1} className="outline-none">
         <Hero />
         <Why />
-        <Servicios />
         <NivelesIA />
+        <Servicios />
+        <ATuLado />
+        <MetaBeneficios />
         <Paquetes />
         <Mantenimiento />
         <Faq />

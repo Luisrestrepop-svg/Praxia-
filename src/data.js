@@ -1,58 +1,63 @@
-// Servicios de Praxia Labs (estructura 2026) · precios en pesos colombianos (COP)
-export const PROMO_END = '15 de noviembre de 2026'
+// Servicios de Praxia Labs (modelo noviembre 2026) · precios en pesos colombianos (COP)
+// Enfoque: automatización de WhatsApp y páginas web.
 
 export const services = [
   {
     id: 'whatsapp',
     number: '1',
-    title: 'Servicios de personalización de WhatsApp',
-    summary: 'Un chatbot en tu WhatsApp que atiende a tus clientes a toda hora. Elige el nivel según qué tan compleja necesites la conversación.',
+    title: 'Automatización de WhatsApp',
+    summary: 'Dos posibilidades: con el agente de IA de Meta o con un chatbot hecho por Praxia. Elige la que tu negocio necesite.',
     icon: 'M21 11.5a8.4 8.4 0 01-8.4 8.4 8.3 8.3 0 01-3.9-1L3 20l1.2-5.6a8.3 8.3 0 01-1-3.9A8.4 8.4 0 0111.6 2a8.4 8.4 0 019.4 8.4z',
     plans: [
-      { name: 'Agente de IA de Meta', desc: 'Configuramos y entrenamos el agente de IA de WhatsApp Business con la información de tu negocio. Meta lo está habilitando poco a poco; su suscripción se paga directo a Meta.', price: '$500.000 COP', priceNote: 'Configuración · pago único', promo: 'Nuevo', group: 'Servicio con Meta', priceValue: 500000 },
-      { name: 'Chatbot personalizable', desc: 'Un chatbot hecho a tu medida: tú defines el menú de opciones, las respuestas y los flujos. Ideal si tus clientes preguntan siempre lo mismo: horarios, precios y ubicación.', price: '$1.000.000 COP', priceNote: 'Pago único', priceValue: 1000000, group: 'Nuestros chatbots' },
-      { name: 'Chatbot con IA conversacional', desc: 'Responde preguntas abiertas y entiende el contexto, con inteligencia artificial integrada a WhatsApp Business.', price: '$1.500.000 COP', priceNote: 'Pago único', priceValue: 1500000, group: 'Nuestros chatbots' },
-      { name: 'Agente autónomo con integraciones', desc: 'Califica leads, actualiza tu CRM y agenda citas, conectado a tus sistemas.', price: 'Desde $2.000.000 COP', priceNote: 'Según especificaciones técnicas', priceValue: 2000000, group: 'Nuestros chatbots' },
+      { name: 'Agente de IA de Meta', desc: 'Pagas la suscripción directo a Meta y adquieres su IA. Nosotros la configuramos y le damos las primeras indicaciones. Responde las 24 horas, agenda en tu Google Calendar y envía recordatorios. Meta lo está habilitando poco a poco.', price: '$400.000 COP', priceNote: 'Configuración · pago único', promo: 'Posibilidad 1', priceValue: 400000 },
+      { name: 'Chatbot de Praxia', desc: 'Un chatbot hecho por Praxia: tiene lo que ofrece Meta, más personalización para pagos (enlace de pago para abono o pago completo), posventa (diagnóstico y evaluación de cómo se comportan tus ventas) y reseñas (estrategias de invitación en redes sociales).', price: 'Desde $280.000 COP', priceNote: 'Al mes · según especificaciones', promo: 'Posibilidad 2', priceValue: 280000 },
     ],
   },
   {
     id: 'web',
     number: '2',
-    title: 'Página web y catálogos',
-    summary: 'Tu casa digital propia: te encuentran en Google y te escriben por WhatsApp.',
+    title: 'Páginas web',
+    summary: 'Tu casa digital propia: te encuentran en Google y te escriben por WhatsApp. El dominio y el hosting se pagan aparte.',
     icon: 'M12 3a9 9 0 100 18 9 9 0 000-18zM3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18',
     plans: [
-      { name: 'Página web básica', desc: 'Una página en tu propio dominio, hasta 4 secciones, botón de WhatsApp y ficha de Google Business Profile optimizada. Se ve bien en celular.', price: 'Desde $1.200.000 COP', priceNote: 'Según especificaciones', priceValue: 1200000 },
-      { name: 'Página web completa', desc: 'Hasta 5 secciones, formulario de contacto, SEO local básico y medición de visitas.', price: 'Desde $1.800.000 COP', priceNote: 'Según especificaciones', priceValue: 1800000 },
-      { name: 'Web con tienda', desc: 'Catálogo grande de productos, categorías y pagos en línea, conectados a WhatsApp.', oldPrice: 'Desde $3.500.000 COP', price: 'Desde $2.800.000 COP', priceNote: 'Según especificaciones', promo: '20% de descuento', priceValue: 2800000 },
-    ],
-  },
-  {
-    id: 'datos',
-    number: '3',
-    title: 'Análisis de datos',
-    summary: 'Sabe qué funciona: juntamos tus conversaciones de WhatsApp, citas, pagos y anuncios en un solo tablero.',
-    icon: 'M4 20V10M10 20V4M16 20v-7M22 20H2',
-    plans: [
-      { name: 'Diagnóstico', desc: 'Revisamos cómo llegan hoy tus clientes y tus ventas, qué se mide y qué no. Recibes un informe con 5 acciones.', price: '$400.000 COP', priceNote: 'Pago único', priceValue: 400000 },
-      { name: 'Tablero de resultados', desc: 'Un panel con conversaciones, citas, ventas, costo por cliente y rendimiento de tus anuncios.', price: '$1.200.000 COP', priceNote: 'Pago único', priceValue: 1200000 },
-      { name: 'Informe mensual', desc: 'Lectura de tus números, recomendaciones y una reunión de 30 minutos.', price: '$300.000 COP', priceNote: 'Al mes', priceValue: 300000 },
-    ],
-  },
-  {
-    id: 'redes',
-    number: '4',
-    title: 'Redes sociales y publicidad',
-    summary: 'Más gente que te escribe: anuncios que abren WhatsApp y contenido que da confianza.',
-    icon: 'M3 11l18-8v18L3 13zM7 14v6',
-    plans: [
-      { name: 'Impulso visual', desc: '4 piezas publicitarias por el precio de 3, con fotos de producto mejoradas con IA, listas para WhatsApp y redes.', price: '$220.000 COP', priceNote: 'Paga 3, lleva 4', promo: 'Promo', priceValue: 220000 },
-      { name: 'Anuncios que abren WhatsApp', desc: 'Creamos y gestionamos campañas en Facebook e Instagram, con el chatbot atendiendo los mensajes. La inversión en anuncios la pagas tú directo a Meta.', price: '$600.000 COP', priceNote: 'Al mes + inversión en anuncios', priceValue: 600000 },
-      { name: 'Contenido y redes', desc: 'Gestión mensual de tus redes sociales con contenido creado con IA.', price: 'Desde $600.000 COP', priceNote: 'Al mes', priceValue: 600000 },
-      { name: 'Todo en uno', desc: 'Anuncios, contenido e informe mensual en un solo plan.', price: 'Desde $1.200.000 COP', priceNote: 'Al mes', priceValue: 1200000 },
+      { name: 'Página web básica', desc: 'Una página con tu dominio, hasta 4 secciones, botón de WhatsApp y ficha de Google Business Profile optimizada. Se ve bien en celular.', price: 'Desde $1.200.000 COP', priceNote: 'Según especificaciones · sin dominio', priceValue: 1200000 },
+      { name: 'Página web completa', desc: 'Hasta 5 secciones, botón de WhatsApp, ficha de Google Business Profile optimizada, formulario de contacto y medición de visitas.', price: 'Desde $1.800.000 COP', priceNote: 'Según especificaciones · sin dominio', priceValue: 1800000 },
+      { name: 'Web con tienda', desc: 'Todo lo de la página completa, más catálogo de productos, categorías y pagos en línea. Incluye un repositorio de datos para guardar tu información, con una mensualidad de $120.000 COP.', price: 'Desde $2.000.000 COP', priceNote: 'Según especificaciones · sin dominio · + $120.000 al mes por el repositorio de datos', priceValue: 2000000 },
     ],
   },
 ]
+
+// Servicio mensual: administración de WhatsApp y de la página web
+export const aTuLado = {
+  name: 'Praxia a tu lado',
+  tagline: 'Un equipo técnico que te acompaña cada mes: administra tu WhatsApp y tu página web, para que tú te dediques a tu negocio.',
+  price: '$500.000 COP',
+  priceNote: 'Al mes · sobre tu cuenta de Meta o sobre nuestro chatbot',
+  whatsapp: ['Administramos tus conversaciones', 'Organizamos tu agenda', 'Te damos información relevante de tu empresa'],
+  web: ['Mantenemos tu página al día: cambios de textos, precios y fotos'],
+  note: 'Las actividades se acuerdan contigo según lo que tu negocio necesite.',
+}
+
+// Proceso del cliente en WhatsApp: qué hace Meta y qué hace Praxia
+export const proceso = [
+  { n: '1', title: 'Respuestas', who: 'meta', text: 'La IA responde lo básico de tu negocio: productos, servicios y precios. Lo que requiere una persona, se lo pasa.' },
+  { n: '2', title: 'Agendamiento', who: 'meta', text: 'Agenda la cita en tu Google Calendar, envía recordatorio y permite confirmar o cancelar.' },
+  { n: '3', title: 'Pagos', who: 'praxia', text: 'Con el chatbot de Praxia enviamos por WhatsApp el enlace de pago, para abono o pago completo.' },
+  { n: '4', title: 'Posventa', who: 'praxia', text: 'Diagnóstico y evaluación de cómo se comportan tus ventas, para que tomes mejores decisiones.' },
+  { n: '5', title: 'Reseñas', who: 'praxia', text: 'Estrategias de invitación para que más personas opinen de ti en internet y en redes sociales.' },
+]
+export const procesoNota = 'El agente de Meta lo habilita Meta de forma gradual y puede no estar disponible aún en tu cuenta. Su suscripción se paga directo a Meta.'
+
+// Beneficios de la suscripción de Meta (pantalla de suscripción, noviembre 2026)
+export const metaBenefits = {
+  groups: [
+    { title: 'Muestra que tu perfil es auténtico', items: ['Insignia de verificación (aún no disponible)', 'Protección contra suplantación de identidad', '1 canal verificado (aún no disponible)'] },
+    { title: 'Meta Business Agent', items: ['Respuestas a tus clientes las 24 horas (Meta lo habilita poco a poco: está empezando)', 'Agenda citas con Google Calendar y envía recordatorios'] },
+    { title: 'Amplía tus operaciones', items: ['4 dispositivos vinculados', 'URL web personalizada', 'Más chats nuevos (beneficio de prueba)'] },
+  ],
+  does: { title: 'Lo que hace con tus citas', items: ['Agenda las citas en tu Google Calendar', 'Envía recordatorios con opción de asistir o no', 'Si el cliente cancela o pospone, se agenda como una cita nueva', 'Lo que no puede resolver lo pasa a una persona'] },
+  note: 'Nota: algunos de estos servicios no están totalmente disponibles y otros se deben solicitar a Meta. La suscripción se paga directo a Meta.',
+}
 
 export const whyItems = [
   {
@@ -72,106 +77,38 @@ export const whyItems = [
   },
 ]
 
-export const benefits = [
-  {
-    label: 'Atención al cliente 24/7:',
-    desc: 'Un chatbot responde en segundos a cualquier hora, incluyendo fines de semana y festivos. Elimina el costo de personal disponible fuera del horario laboral y mejora la experiencia del cliente.',
-  },
-  {
-    label: 'Calificación automática de leads:',
-    desc: 'En lugar de que tu equipo de ventas atienda cada consulta desde cero, el chatbot filtra y califica los prospectos. Solo los leads con intención real llegan al equipo humano, aumentando la eficiencia y el cierre.',
-  },
-  {
-    label: 'Reservas y agendamiento:',
-    desc: 'El interminable intercambio de mensajes para coordinar citas puede automatizarse completamente. El chatbot verifica disponibilidad, confirma la cita y envía recordatorios automáticos.',
-  },
-]
-
-// Servicio nuevo (Meta lo habilita de forma gradual)
-export const metaAgent = {
-  name: 'Novedad: agente de IA de Meta para WhatsApp Business',
-  price: '$500.000 COP',
-  priceNote: 'Configuración y entrenamiento · pago único',
-  text: 'Meta está habilitando poco a poco un agente de IA dentro de WhatsApp Business que responde a tus clientes. Nosotros lo configuramos y lo entrenamos con la información de tu negocio: servicios, precios, horarios y preguntas frecuentes, para que responda bien desde el primer día.',
-  feats: ['Carga de la información de tu empresa y tus productos', 'Respuestas a las preguntas frecuentes de tus clientes', 'Pruebas antes de activarlo con clientes reales', 'Ajustes después de las primeras conversaciones'],
-  note: 'El agente lo habilita Meta de forma gradual y todavía está empezando: puede no estar disponible aún en tu cuenta. Su suscripción se paga directo a Meta y no está incluida. Hoy no se conecta a un calendario, así que para agendar citas conectadas a tu agenda usamos un chatbot de los niveles de arriba.',
-}
-
-// Beneficios de la suscripción de Meta (pantalla de suscripción, noviembre 2026)
-export const metaBenefits = {
-  groups: [
-    { title: 'Muestra que tu perfil es auténtico', items: ['Insignia de verificación', 'Protección contra suplantación de identidad', '1 canal verificado'] },
-    { title: 'Meta Business Agent', items: ['Respuestas a tus clientes las 24 horas (Meta lo habilita poco a poco: está empezando)'] },
-    { title: 'Amplía tus operaciones', items: ['4 dispositivos vinculados', 'URL web personalizada', 'Más chats nuevos (beneficio de prueba)'] },
-  ],
-  not: { title: 'Lo que no hace hoy', text: 'Conectarse a tu calendario para agendar citas. Solo se conecta a Google Drive. Para agendar, usa un chatbot de Praxia Labs.' },
-  note: 'Nota: algunos de estos servicios no están totalmente disponibles y otros se deben solicitar a Meta. La suscripción se paga directo a Meta.',
-}
-
-export const tiers = [
-  {
-    name: 'Chatbot personalizable',
-    price: '$1.000.000 COP',
-    priceNote: 'Pago único',
-    time: '1–2 semanas',
-    includes: 'Diseño de flujos, configuración, pruebas y capacitación.',
-    label: 'Funcionalidades',
-    feats: ['Menú de opciones a tu medida', 'Respuestas que tú defines', 'Flujos básicos personalizados'],
-    audience: 'Ideal si tus clientes suelen preguntar lo mismo: horarios, precios y ubicación. Se adapta a la forma de hablar y a las reglas de tu negocio.',
-  },
-  {
-    name: 'Chatbot con IA conversacional',
-    price: '$1.500.000 COP',
-    note: 'El valor no incluye los servicios de terceros que hacen funcionar el chatbot: WhatsApp, la inteligencia artificial que elijas y el almacenamiento de tus datos. Estos se pagan aparte, directamente al proveedor.',
-    label: 'Funcionalidades',
-    recommended: true,
-    time: '2–4 semanas',
-    includes: 'Desarrollo y entrenamiento, integración con WhatsApp Business API y pruebas extensas.',
-    feats: ['Responde preguntas abiertas', 'Entiende el contexto', 'Integración con WhatsApp Business'],
-    audience: 'Ideal si tus clientes hacen preguntas muy distintas y necesitas respuestas naturales, como las de una persona.',
-  },
-  {
-    name: 'Agente autónomo con integraciones',
-    price: '$2.000.000 COP',
-    priceNote: 'Desde · según especificaciones técnicas',
-    time: '6–12 semanas',
-    includes: 'Arquitectura completa, integraciones con sistemas externos, testing y documentación.',
-    note: 'Es un precio de referencia, ya que el valor final se define según la complejidad técnica de tu proyecto, como las integraciones con tus sistemas y las reglas de negocio a la medida. No incluye los servicios de terceros (WhatsApp, la inteligencia artificial que elijas y el almacenamiento de datos), que se pagan aparte.',
-    label: 'Funcionalidades',
-    feats: ['Califica leads', 'Actualiza CRM', 'Agenda citas', 'Razona de forma autónoma'],
-    audience: 'Ideal para empresas con procesos de ventas o soporte más complejos, que necesitan conectar varios sistemas.',
-  },
-]
-
 export const plans = [
   {
     name: 'Arranque',
-    tag: 'Para empezar con lo básico',
-    price: 'Desde $1.950.000 COP',
-    save: 'Ahorras $250.000',
-    feats: ['Chatbot personalizable', 'Página web básica', 'Ficha de Google Business Profile'],
+    tag: 'Agente de Meta y página web',
+    price: 'Desde $1.450.000 COP',
+    save: 'Ahorras $150.000',
+    feats: ['Configuración del agente de IA de Meta', 'Página web básica', 'Ficha de Google Business Profile'],
   },
   {
     name: 'Crecimiento',
-    tag: 'Chatbot con IA y página web',
-    price: '$2.650.000 COP',
-    save: 'Ahorras $270.000',
+    tag: 'Chatbot de Praxia y página web',
+    price: 'Desde $1.200.000 COP',
+    save: '',
+    note: 'Página web básica (pago único) + chatbot desde $280.000 al mes',
     badge: 'Más elegido',
     featured: true,
-    feats: ['Chatbot con IA conversacional', 'Página web básica', 'Impulso visual: 4 piezas por el precio de 3'],
+    feats: ['Chatbot de Praxia', 'Pagos, posventa y reseñas', 'Página web básica'],
   },
   {
-    name: 'Todo en uno',
-    tag: 'Atiende, vende y mide',
-    price: 'Desde $5.400.000 COP',
-    save: 'Ahorras $600.000',
-    feats: ['Agente autónomo con integraciones', 'Web con tienda (con 20% de descuento)', 'Tablero de resultados'],
+    name: 'Completo',
+    tag: 'Chatbot de Praxia y web con tienda',
+    price: 'Desde $2.000.000 COP',
+    save: '',
+    note: 'Web con tienda (pago único) + $120.000 al mes de repositorio de datos + chatbot desde $280.000 al mes',
+    feats: ['Chatbot de Praxia', 'Pagos, posventa y reseñas', 'Web con tienda y pagos en línea'],
   },
 ]
 
 export const navLinks = [
-  { href: '#servicios', label: 'Servicios' },
   { href: '#whatsapp', label: 'WhatsApp' },
+  { href: '#servicio-web', label: 'Páginas web' },
+  { href: '#a-tu-lado', label: 'Praxia a tu lado' },
   { href: '#paquetes', label: 'Paquetes' },
   { href: '#nosotros', label: 'Nosotros' },
 ]
@@ -186,49 +123,43 @@ export const waLink = (msg = 'Hola quiero más información de Praxia Labs y sus
 export const faqs = [
   {
     q: '¿Qué hace Praxia Labs?',
-    a: 'Praxia Labs es un equipo de Medellín que ayuda a tiendas, restaurantes y negocios de barrio a atender, vender y crecer en lo digital. Tenemos cuatro servicios: servicios de personalización de WhatsApp (chatbots y agente de IA), página web y catálogos, análisis de datos, y redes sociales y publicidad.',
+    a: 'Praxia Labs es un equipo de Medellín que ayuda a tiendas, restaurantes y negocios de barrio a atender, agendar, cobrar y fidelizar a sus clientes por WhatsApp, y a tener su propia página web. Tenemos dos servicios: automatización de WhatsApp y páginas web.',
   },
   {
-    q: '¿Cuánto cuesta un chatbot de WhatsApp para mi negocio?',
-    a: 'Tenemos tres niveles. El chatbot personalizable cuesta $1.000.000 COP (pago único), el chatbot con IA conversacional cuesta $1.500.000 COP y el agente autónomo con integraciones parte desde $2.000.000 COP según la complejidad de tu proyecto. Los servicios de terceros, como WhatsApp o la IA que elijas, se pagan aparte directamente al proveedor.',
+    q: '¿Qué incluye la automatización de WhatsApp?',
+    a: 'Hay dos posibilidades. La primera es el agente de IA de Meta: pagas la suscripción directo a Meta y nosotros lo configuramos y le damos las primeras indicaciones; responde las 24 horas, agenda en tu Google Calendar y envía recordatorios. La segunda es un chatbot hecho por Praxia, que tiene lo que ofrece Meta más personalización para pagos, posventa (diagnóstico y evaluación de cómo se comportan tus ventas) y reseñas (estrategias de invitación en redes sociales).',
+  },
+  {
+    q: '¿Cuánto cuesta la automatización de WhatsApp?',
+    a: 'La configuración del agente de IA de Meta cuesta $400.000 COP (pago único; la suscripción de Meta se paga aparte, directo a Meta). El chatbot de Praxia cuesta desde $280.000 COP al mes. Además, “Praxia a tu lado” administra tu WhatsApp y tu página web cada mes por $500.000 COP.',
   },
   {
     q: '¿Qué es el agente de IA de Meta y ustedes lo configuran?',
-    a: 'Es un agente de IA que Meta está habilitando poco a poco dentro de WhatsApp Business y que responde a tus clientes. Todavía está empezando y puede no estar disponible en tu cuenta. Nosotros lo configuramos y lo entrenamos con la información de tu negocio por $500.000 COP (pago único). Su suscripción se paga directo a Meta y no está incluida; trae otros beneficios como la insignia de verificación, protección contra suplantación, 1 canal verificado, 4 dispositivos vinculados y una URL web personalizada. Algunos de estos servicios no están totalmente disponibles y otros se deben solicitar a Meta. Hoy el agente no se conecta a un calendario; si necesitas agendar citas, usamos un chatbot de nuestros niveles.',
+    a: 'Es un agente de IA que Meta está habilitando poco a poco dentro de WhatsApp Business. Responde a tus clientes, agenda citas en tu Google Calendar, envía recordatorios con opción de asistir o no, y pasa a una persona lo que no puede resolver. Todavía está empezando y puede no estar disponible en tu cuenta. Nosotros lo configuramos y le damos las primeras indicaciones por $400.000 COP (pago único). Su suscripción se paga directo a Meta y no está incluida. Algunos de sus servicios no están totalmente disponibles y otros se deben solicitar a Meta.',
   },
   {
-    q: '¿Cuánto tarda en estar listo mi chatbot?',
-    a: 'El chatbot personalizable queda listo en 1 a 2 semanas, el chatbot con IA conversacional en 2 a 4 semanas y el agente autónomo en 6 a 12 semanas. Si hay que crear la cuenta de WhatsApp Business API desde cero, suma entre 1 y 2 semanas.',
-  },
-  {
-    q: '¿Cuánto cuesta una página web?',
-    a: 'La página web básica parte desde $1.200.000 COP, la completa desde $1.800.000 COP y la web con tienda desde $2.800.000 COP (con 20% de descuento hasta el 15 de noviembre de 2026; precio normal desde $3.500.000 COP). El valor final depende de las especificaciones de tu negocio: secciones, productos, pagos en línea, textos o fotos que haya que crear. Te cotizamos por escrito antes de empezar.',
+    q: '¿Qué es Praxia a tu lado?',
+    a: 'Es nuestro servicio mensual de $500.000 COP: un equipo técnico administra tus conversaciones de WhatsApp, organiza tu agenda y te da información relevante de tu empresa, sobre tu cuenta de Meta o sobre nuestro chatbot. También mantenemos tu página web al día con cambios de textos, precios y fotos. Las actividades se acuerdan contigo según lo que tu negocio necesite.',
   },
   {
     q: '¿Necesito saber de tecnología para trabajar con ustedes?',
     a: 'No. Nosotros configuramos todo y te explicamos cada paso con calma y sin tecnicismos. Trabajamos con dueños de todas las edades, incluyendo quienes nunca han usado estas herramientas, y nos quedamos contigo mientras aprendes.',
   },
   {
+    q: '¿Cuánto cuesta una página web?',
+    a: 'La página web básica parte desde $1.200.000 COP, la completa desde $1.800.000 COP y la web con tienda desde $2.000.000 COP, más una mensualidad de $120.000 COP por el repositorio de datos. El valor final depende de las especificaciones de tu negocio: secciones, productos, pagos en línea, textos o fotos que haya que crear. El dominio y el hosting no están incluidos. Te cotizamos por escrito antes de empezar.',
+  },
+  {
     q: '¿Qué incluyen los paquetes y cuánto cuestan?',
-    a: '“Arranque” cuesta desde $1.950.000 COP: chatbot personalizable y página web básica. “Crecimiento” cuesta $2.650.000 COP: chatbot con IA conversacional, página web básica e Impulso visual. “Todo en uno” cuesta desde $5.400.000 COP: agente autónomo con integraciones, web con tienda y tablero de resultados. El precio de Todo en uno incluye la web con tienda con 20% de descuento, válido hasta el 15 de noviembre de 2026. Los precios con “desde” dependen de las especificaciones de tu negocio.',
-  },
-
-  {
-    q: '¿Los precios incluyen dominio, hosting o WhatsApp?',
-    a: 'No. Los precios no incluyen servicios de terceros como WhatsApp, la inteligencia artificial que elijas, el almacenamiento de datos, el dominio o el hosting de tu web, ni la inversión en anuncios. Estos se pagan aparte, directamente al proveedor, y te los explicamos antes de empezar.',
-  },
-
-  {
-    q: '¿Qué es el análisis de datos y para qué me sirve?',
-    a: 'Es saber qué funciona en tu negocio. Juntamos tus conversaciones de WhatsApp, citas, pagos y anuncios en un solo tablero para que veas cuántos clientes llegan, cuántos compran y cuánto te cuesta cada uno. Puedes empezar con un diagnóstico de $400.000 COP.',
+    a: '“Arranque” cuesta desde $1.450.000 COP: configuración del agente de IA de Meta y página web básica. “Crecimiento” combina la página web básica (desde $1.200.000 COP, pago único) con el chatbot de Praxia (desde $280.000 COP al mes). “Completo” combina la web con tienda (desde $2.000.000 COP, pago único, más $120.000 COP al mes del repositorio de datos) con el chatbot de Praxia (desde $280.000 COP al mes). Los precios con “desde” dependen de las especificaciones de tu negocio. “Praxia a tu lado” no está incluido.',
   },
   {
-    q: '¿Hacen anuncios y manejan redes sociales?',
-    a: 'Sí. Creamos y gestionamos campañas en Facebook e Instagram que abren una conversación en tu WhatsApp ($600.000 COP al mes, más la inversión en anuncios que pagas a Meta), y gestionamos tus redes con contenido creado con IA desde $600.000 COP al mes.',
+    q: '¿Los precios incluyen dominio, hosting, WhatsApp o la suscripción de Meta?',
+    a: 'No. Los precios no incluyen servicios de terceros: la suscripción de Meta, WhatsApp y el costo de sus mensajes, la inteligencia artificial que elijas, el almacenamiento de datos, la comisión de la pasarela de pagos, el dominio y el hosting. Estos se pagan aparte, directamente al proveedor, y te los explicamos antes de empezar.',
   },
   {
-    q: '¿Ofrecen mantenimiento y acompañamiento después de entregar el proyecto?',
-    a: 'Sí. Para tu web tienes dos opciones: servicio a necesidad por $150.000 COP cada vez, previa cita, o una anualidad de $600.000 COP con cinco servicios durante el año (cinco al precio de cuatro). Para WhatsApp ofrecemos un acompañamiento mensual opcional de $250.000 COP.',
+    q: '¿Ofrecen mantenimiento de la página web?',
+    a: 'Sí. Tienes dos opciones: servicio a necesidad por $150.000 COP cada vez, previa cita, o una anualidad de $600.000 COP con cinco servicios durante el año (cinco al precio de cuatro).',
   },
   {
     q: '¿Cómo puedo contactar a Praxia Labs?',

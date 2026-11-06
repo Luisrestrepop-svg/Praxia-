@@ -27,7 +27,7 @@ export function buildJsonLd() {
     logo: { '@type': 'ImageObject', url: LOGO, width: 825, height: 299 },
     image: OG_IMAGE,
     description:
-      'WhatsApp Business con agenda y pagos, páginas web y catálogos, análisis de datos, y redes sociales y publicidad para negocios de Medellín.',
+      'Automatización de WhatsApp (respuestas, agenda, pagos, posventa, campañas y reseñas) y páginas web para negocios de Medellín.',
     slogan: 'Conecta tu negocio',
     email: EMAIL,
     telephone: '+573217908685',
@@ -73,7 +73,7 @@ export function buildJsonLd() {
     '@type': 'WebPage',
     '@id': `${SITE_URL}/#webpage`,
     url: `${SITE_URL}/`,
-    name: 'Praxia Labs — WhatsApp con IA, páginas web, datos y publicidad en Medellín',
+    name: 'Praxia Labs — Automatización de WhatsApp y páginas web en Medellín',
     isPartOf: { '@id': SITE_ID },
     about: { '@id': ORG_ID },
     primaryImageOfPage: { '@type': 'ImageObject', url: OG_IMAGE },

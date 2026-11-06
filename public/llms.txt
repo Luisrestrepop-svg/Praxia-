@@ -1,51 +1,38 @@
 # Praxia Labs
 
-> Praxia Labs es un equipo de Medellín, Colombia, que ayuda a tiendas, restaurantes y negocios de barrio a atender, vender y crecer en lo digital: servicios de personalización de WhatsApp (chatbots y agente de IA), páginas web y catálogos, análisis de datos, y redes sociales y publicidad. Acompañamiento cercano y sin tecnicismos, también para dueños que nunca han usado estas herramientas.
+> Praxia Labs es un equipo de Medellín, Colombia, que ayuda a tiendas, restaurantes y negocios de barrio a atender, agendar, cobrar y fidelizar a sus clientes por WhatsApp, y a tener su propia página web. Acompañamiento cercano y sin tecnicismos, también para dueños que nunca han usado estas herramientas.
 
 Sitio web: https://www.praxialabs.store/
 Contacto: WhatsApp +57 321 790 8685 · praxialabsm@gmail.com
 Redes: https://www.instagram.com/praxialabs · https://www.tiktok.com/@praxialabs
 Idioma: español (Colombia). Moneda: pesos colombianos (COP).
 
-## 1. Servicios de personalización de WhatsApp
+## 1. Automatización de WhatsApp
 
-- Nuevo: configuración y entrenamiento del agente de IA de Meta para WhatsApp Business: $500.000 COP, pago único. Meta lo habilita de forma gradual y todavía está empezando; puede no estar disponible aún en la cuenta. Su suscripción se paga directo a Meta. Hoy no se conecta a un calendario.
-- Chatbot personalizable: $1.000.000 COP, pago único, listo en 1 a 2 semanas. Un chatbot hecho a la medida del negocio: menú de opciones, respuestas y flujos definidos por el cliente.
-- Chatbot con IA conversacional: $1.500.000 COP, pago único, listo en 2 a 4 semanas. Responde preguntas abiertas, entiende el contexto e integra WhatsApp Business.
-- Agente autónomo con integraciones: desde $2.000.000 COP según la complejidad, listo en 6 a 12 semanas. Califica leads, actualiza el CRM y agenda citas.
-- Si hay que crear la cuenta de WhatsApp Business API desde cero, suma entre 1 y 2 semanas.
-- No incluyen servicios de terceros (WhatsApp, la IA elegida y el almacenamiento de datos), que se pagan aparte directamente al proveedor.
+Dos posibilidades:
+- Posibilidad 1, agente de IA de Meta: el cliente paga la suscripción directo a Meta y adquiere su IA; Praxia la configura y le da las primeras indicaciones por $400.000 COP (pago único). Responde las 24 horas, agenda en Google Calendar, envía recordatorios con opción de asistir o no y pasa a una persona lo que no puede resolver. Meta lo habilita de forma gradual y todavía está empezando; puede no estar disponible aún en la cuenta.
+- Posibilidad 2, chatbot de Praxia: desde $280.000 COP al mes. Tiene lo que ofrece Meta, más personalización para pagos (enlace de pago para abono o pago completo), posventa (diagnóstico y evaluación de cómo se comportan las ventas) y reseñas (estrategias de invitación en redes sociales).
 
-Lo que incluye la suscripción de Meta (se paga directo a Meta): insignia de verificación, protección contra suplantación de identidad, 1 canal verificado, Meta Business Agent (respuestas 24 horas, Meta lo habilita poco a poco), 4 dispositivos vinculados, URL web personalizada y más chats nuevos (beneficio de prueba). Algunos de estos servicios no están totalmente disponibles y otros se deben solicitar a Meta. El agente de Meta no se conecta a un calendario (solo a Google Drive); para agendar citas se usa un chatbot de Praxia Labs.
+Lo que incluye la suscripción de Meta (se paga directo a Meta): protección contra suplantación de identidad, Meta Business Agent, 4 dispositivos vinculados, URL web personalizada y más chats nuevos (beneficio de prueba). La insignia de verificación y el canal verificado aún no están disponibles. Algunos servicios no están totalmente disponibles y otros se deben solicitar a Meta.
 
-## 2. Página web y catálogos
+## 2. Páginas web
 
-- Página web básica: desde $1.200.000 COP. Una página, hasta 4 secciones, botón de WhatsApp y ficha de Google Business Profile.
-- Página web completa: desde $1.800.000 COP. Hasta 5 secciones, formulario, SEO local básico y medición.
-- Web con tienda: desde $2.800.000 COP con 20% de descuento hasta el 15 de noviembre de 2026 (precio normal desde $3.500.000 COP).
-- El valor final depende de las especificaciones del cliente. Dominio y hosting aparte.
-- Mantenimiento: $150.000 COP por servicio (previa cita) o anualidad de $600.000 COP por 5 servicios al año.
+- Página web básica: desde $1.200.000 COP. Hasta 4 secciones, botón de WhatsApp y ficha de Google Business Profile optimizada.
+- Página web completa: desde $1.800.000 COP. Hasta 5 secciones, botón de WhatsApp, ficha de Google optimizada, formulario de contacto y medición de visitas.
+- Web con tienda: desde $2.000.000 COP. Lo de la página completa más catálogo de productos, categorías y pagos en línea. Suma una mensualidad de $120.000 COP por el repositorio de datos.
+- El valor final depende de las especificaciones del cliente. El dominio y el hosting no están incluidos.
+- Mantenimiento de la web: $150.000 COP por servicio (previa cita) o anualidad de $600.000 COP por 5 servicios al año.
 
-## 3. Análisis de datos
+## 3. Praxia a tu lado (servicio mensual)
 
-- Diagnóstico: $400.000 COP. Informe con 5 acciones.
-- Tablero de resultados: $1.200.000 COP. Conversaciones, citas, ventas, costo por cliente y anuncios.
-- Informe mensual: $300.000 COP al mes.
-
-## 4. Redes sociales y publicidad
-
-- Impulso visual: $220.000 COP. 4 piezas publicitarias por el precio de 3, con fotos de producto mejoradas con IA.
-- Anuncios que abren WhatsApp: $600.000 COP al mes, más la inversión en anuncios que paga el cliente a Meta.
-- Contenido y redes: desde $600.000 COP al mes.
-- Todo en uno (anuncios, contenido e informe mensual): desde $1.200.000 COP al mes.
+Praxia a tu lado: $500.000 COP al mes. Un equipo técnico administra las conversaciones de WhatsApp, organiza la agenda y brinda información relevante de la empresa, sobre la cuenta de Meta o sobre el chatbot de Praxia. También mantiene la página web al día con cambios de textos, precios y fotos. Las actividades se acuerdan con cada cliente.
 
 ## Paquetes
 
-- Arranque: desde $1.950.000 COP. Chatbot personalizable y página web básica.
-- Crecimiento: $2.650.000 COP. Chatbot con IA conversacional, página web básica e Impulso visual.
-- Todo en uno: desde $5.400.000 COP. Agente autónomo con integraciones, web con tienda (con 20% de descuento) y tablero de resultados.
-- El precio de Todo en uno incluye la web con tienda con 20% de descuento, válido hasta el 15 de noviembre de 2026.
-- No incluyen servicios de terceros: WhatsApp, IA elegida, almacenamiento de datos, dominio, hosting ni inversión en anuncios.
+- Arranque: desde $1.450.000 COP. Configuración del agente de IA de Meta y página web básica.
+- Crecimiento: desde $1.200.000 COP (página web básica, pago único) más el chatbot de Praxia desde $280.000 COP al mes.
+- Completo: desde $2.000.000 COP (web con tienda, pago único) más $120.000 COP al mes del repositorio de datos y el chatbot de Praxia desde $280.000 COP al mes.
+- No incluyen Praxia a tu lado ni servicios de terceros: suscripción de Meta, WhatsApp y el costo de sus mensajes, IA elegida, almacenamiento de datos, comisión de la pasarela, dominio ni hosting.
 
 ## Más información
 

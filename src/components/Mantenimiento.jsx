@@ -28,9 +28,9 @@ export default function Mantenimiento() {
     <section className="section" id="mantenimiento">
       <div className="wrap">
         <span className="eyebrow">Mantenimiento</span>
-        <h2 className="mb-3.5 text-[32px] sm:text-[44px]">Mantenimiento y actualización</h2>
+        <h2 className="mb-3.5 text-[32px] sm:text-[44px]">Mantenimiento de tu página web</h2>
         <p className="mb-12 max-w-[640px] text-[17px] text-muted">
-          Tu negocio cambia, y lo que construimos juntos también debe hacerlo: nuevos precios, productos, horarios o respuestas para tus clientes. Nos encargamos de mantener todo al día y funcionando, para que tú te dediques a atender tu negocio.
+          Tu negocio cambia, y tu página web también debe hacerlo: nuevos precios, productos u horarios. Nos encargamos de mantenerla al día y funcionando, para que tú te dediques a atender tu negocio.
         </p>
 
         <div className="grid gap-6 min-[801px]:grid-cols-2">

@@ -1,4 +1,4 @@
-import { services, PROMO_END, waLink } from '../data'
+import { services, waLink } from '../data'
 
 function PlanCard({ p, service }) {
   return (
@@ -18,10 +18,8 @@ function PlanCard({ p, service }) {
       <div className="mb-2 text-base font-semibold text-navy">{p.name}</div>
       <p className="mb-4 text-[14px] leading-relaxed text-muted">{p.desc}</p>
       <div className="mt-auto">
-        {p.oldPrice && <div className="text-[13px] text-muted line-through">{p.oldPrice}</div>}
         <div className={`font-display text-[22px] font-extrabold ${p.promo ? 'text-amber' : 'text-teal'}`}>{p.price}</div>
         <div className="mt-0.5 text-[12.5px] font-medium text-muted">{p.priceNote}</div>
-        {p.oldPrice && <div className="mt-1 text-[12.5px] font-semibold text-teal">Descuento válido hasta el {PROMO_END}</div>}
         <a
           href={waLink(`Hola, quiero información sobre "${p.name}" (${service}) de Praxia Labs.`)}
           target="_blank"
@@ -43,7 +41,7 @@ export default function Servicios() {
           <span className="eyebrow">Servicios</span>
         <h2 className="mb-3.5 text-[32px] sm:text-[44px]">Nuestros servicios</h2>
           <p className="text-[17px] text-muted">
-            Cuatro servicios para que atiendas, vendas y crezcas. Empieza por el que tu negocio necesite hoy y suma los demás cuando quieras.
+            Dos servicios para que atiendas, vendas y fidelices: automatización de WhatsApp y páginas web. Contrata el que tu negocio necesite hoy y suma el otro cuando quieras.
           </p>
         </div>
 
@@ -71,7 +69,7 @@ export default function Servicios() {
                 )
               })
             ) : (
-              <div className={`grid gap-5 ${s.plans.length === 4 ? 'min-[801px]:grid-cols-2 min-[1081px]:grid-cols-4' : 'min-[801px]:grid-cols-3'}`}>
+              <div className={`grid gap-5 ${'min-[801px]:grid-cols-3'}`}>
                 {s.plans.map((p) => (
                   <PlanCard key={p.name} p={p} service={s.title} />
                 ))}
@@ -80,7 +78,7 @@ export default function Servicios() {
           </div>
         ))}
         <p className="max-w-[760px] text-[14px] leading-relaxed text-muted">
-          Precios en pesos colombianos. “Desde” significa que el valor final depende de las especificaciones de tu negocio; siempre te cotizamos por escrito antes de empezar.
+          Precios en pesos colombianos. “Desde” significa que el valor final depende de las especificaciones de tu negocio; siempre te cotizamos por escrito antes de empezar. No incluyen servicios de terceros (suscripción de Meta, WhatsApp, IA, dominio ni hosting).
         </p>
       </div>
     </section>
